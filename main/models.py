@@ -1,67 +1,124 @@
-import sqlalchemy
-from sqlalchemy import DateTime
+import uuid
+from sqlalchemy import Table, String, Column, Integer, Boolean, BigInteger, DateTime, ForeignKey, Text, Uuid, Float, \
+    Select, Enum
 from main.database_settings import metadata
 
-users = sqlalchemy.Table(
+
+users = Table(
     'users',
     metadata,
-    sqlalchemy.Column('id', sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column('full_name', sqlalchemy.String),
-    sqlalchemy.Column('phone_number', sqlalchemy.String),
-    sqlalchemy.Column('chat_id', sqlalchemy.BigInteger),
-    sqlalchemy.Column('lang', sqlalchemy.String),
+    Column('id', Integer, primary_key=True),
+    Column('full_name', String),
+    Column('phone_number', String),
+    Column('username', String),
+    Column('chat_id', BigInteger),
+    Column('status', Boolean, default=True),
+    Column('lang', String),
 )
 
-admins = sqlalchemy.Table(
+admins = Table(
     "admins",
     metadata,
-    sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column('chat_id', sqlalchemy.BigInteger)
+    Column("id", Integer, primary_key=True),
+    Column('chat_id', BigInteger)
 )
 
-menu = sqlalchemy.Table(
+menu = Table(
     "menu",
     metadata,
-    sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column('photo', sqlalchemy.String),
-    sqlalchemy.Column('name', sqlalchemy.String),
+    Column("id", Integer, primary_key=True),
+    Column('photo', String),
+    Column('name', String),
+    Column('name_to_get', String),
+    Column('lang', String),
 )
 
-foods = sqlalchemy.Table(
+basket = Table(
+    'basket',
+    metadata,
+    Column('id', Integer, primary_key=True),
+    Column('product_id', Integer, ForeignKey('foods.id', ondelete='CASCADE')),
+    Column('quantity', Integer),
+    Column('user_id', Integer, ForeignKey('users.id', ondelete='CASCADE'))
+)
+
+foods = Table(
     'foods',
     metadata,
-    sqlalchemy.Column('id', sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column('menu_id', sqlalchemy.Integer, sqlalchemy.ForeignKey("menu.id")),
-    sqlalchemy.Column("name", sqlalchemy.String),
-    sqlalchemy.Column("price", sqlalchemy.Integer),
-    sqlalchemy.Column("desc", sqlalchemy.Text),
-    sqlalchemy.Column("photo", sqlalchemy.Text),
-    sqlalchemy.Column('created_at', sqlalchemy.DateTime(timezone=True)),
-    sqlalchemy.Column('updated_at', sqlalchemy.DateTime(timezone=True))
+    Column('id', Integer, primary_key=True),
+    Column('menu_id', Integer, ForeignKey("menu.id", ondelete='CASCADE'), nullable=True),
+    Column("name", String),
+    Column("price", Integer),
+    Column("desc", Text),
+    Column("photo", Text),
+    Column("lang", String),
+    Column('created_at', DateTime(timezone=True)),
+    Column('updated_at', DateTime(timezone=True))
 )
 
-filials = sqlalchemy.Table(
+filials = Table(
     'filials',
     metadata,
-    sqlalchemy.Column('id', sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column('name', sqlalchemy.String),
-    sqlalchemy.Column('latitude', sqlalchemy.String),
-    sqlalchemy.Column('longitude', sqlalchemy.String),
+    Column('id', Integer, primary_key=True),
+    Column('name', String),
+    Column('latitude', Float),
+    Column('longitude', Float),
+    Column('lang', String),
+    Column('photo', String),
 )
 
-order_numbers = sqlalchemy.Table(
-    'order_numbers',
+socials = Table(
+    'socials',
     metadata,
-    sqlalchemy.Column('id', sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column('number', sqlalchemy.BigInteger)
+    Column('id', Integer, primary_key=True),
+    Column('name', String),
+    Column('link', String),
 )
 
-history_buys = sqlalchemy.Table(
+locations = Table(
+    'locations',
+    metadata,
+    Column('id', Integer, primary_key=True),
+    Column('name', String),
+    Column('latitude', String),
+    Column('longitude', String),
+    Column('user_id', BigInteger, ForeignKey('users.id', ondelete='CASCADE')),
+)
+
+order_abouts = Table(
+    'order_abouts',
+    metadata,
+    Column('id', Integer, primary_key=True, autoincrement=True),
+    Column('number_uuid', Uuid, default=uuid.uuid4, unique=True),
+    Column('number_id', BigInteger),
+    Column('total', BigInteger),
+    Column('user_id', Integer, ForeignKey('users.id', ondelete='CASCADE')),
+    Column('date', DateTime),
+    Column('where_to', String, nullable=True),
+    Column('which_filial', String, nullable=True),
+    Column('type', String)
+)
+
+history_buys = Table(
     'history_buys',
     metadata,
-    sqlalchemy.Column('id', sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column('chat_id', sqlalchemy.BigInteger),
-    sqlalchemy.Column('number_id', sqlalchemy.Integer, sqlalchemy.ForeignKey('order_numbers.id')),
-    sqlalchemy.Column('food_id', sqlalchemy.Integer, sqlalchemy.ForeignKey('foods.id')),
-    sqlalchemy.Column('quantity', sqlalchemy.Integer)
+    Column('id', Integer, primary_key=True),
+    Column('number_id', Integer, ForeignKey('order_abouts.id', ondelete='CASCADE')),
+    Column('food_id', Integer),
+    Column('quantity', Integer),
+)
+
+logo = Table(
+    'logo',
+    metadata,
+    Column('id', Integer, primary_key=True),
+    Column('photo', String)
+)
+
+about_we = Table(
+    'about_we',
+    metadata,
+    Column('id', Integer),
+    Column('about', String),
+    Column('lang', String)
 )
