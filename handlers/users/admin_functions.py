@@ -148,11 +148,10 @@ async def admin_in_socials_handlers(message: types.Message, state: FSMContext):
         await message.answer(text=_(f"🌐 Yangi ijtimoiy tarmoq qaysi dasturda joylashgan?\nMasalan: YouTube", locale=user['lang']), reply_markup=await user_keyboards.cancel_btn(lang=user['lang']))
         await state.set_state('send_new_social_name')
     elif message.text.split(' ')[0] == "🚫🌐":
-        await message.answer(text=userga)
         await message.answer(text=_(f"🌐 Qaysi ijtimoiy tarmoqni olib tashlamoqchisiz? ID Raqamini kiriting", locale=user['lang']), reply_markup=await user_keyboards.cancel_btn(lang=user['lang']))
         await state.set_state('send_remove_social_id')
     elif message.text.split(' ')[0] == "🌐":
-        await message.answer(text=userga)
+        pass
 
 @dp.message_handler(state='send_new_social_name')
 async def send_new_social_name_handler(message: types.Message, state: FSMContext):
@@ -179,7 +178,7 @@ async def send_remove_social_id_handler(message: types.Message, state: FSMContex
     user = await user_settings.get_user(chat_id=message.chat.id)
     try:
         await other.delete_social(id=int(message.text))
-        await message.answer(text=_(f"✅ Ijtimoiy tarmoq ochirib yuborildi", locale=user['lang']), reply_markup=await admin_keyboards.admins(lang=user['lang']))
+        await message.answer(text=_(f"✅ Ijtimoiy tarmoq ochirib yuborildi", locale=user['lang']), reply_markup=await admin_keyboards.admins_panel(lang=user['lang']))
         await state.set_state('admin_state')
     except:
         await message.answer(text=_(f"😕 Kechrasiz bro. Bunday id raqamli IJtimoiy tarmoq mavjud emas, yoki siz id raqamni no'tog'ri kiritdigiz.", locale=user['lang']))
@@ -375,7 +374,7 @@ async def send_message_to_users_handler(message: types.Message, state: FSMContex
         except Exception as e:
             pass
 
-    await message.answer(text=_(f"✅ Foydalanuvchilarga xabar yuborildi", locale=user['lang']), reply_markup=await admin_keyboards.admins(lang=user['lang']))
+    await message.answer(text=_(f"✅ Foydalanuvchilarga xabar yuborildi", locale=user['lang']), reply_markup=await admin_keyboards.admins_panel(lang=user['lang']))
     await state.set_state('admin_state')
 
 
@@ -395,13 +394,33 @@ async def send_id_to_delete_user_handler(call: types.CallbackQuery, state: FSMCo
 async def send_id_to_block_user_handler(message: types.Message, state: FSMContext):
     user = await user_settings.get_user(chat_id=message.chat.id)
     try:
-        await admins.block_user(pk=int(message.text))
-        await message.answer(text=_(f"✅ Foydalanuvchi bloklandi", locale=user['lang']), reply_markup=await admin_keyboards.admins_panel(lang=user['lang']))
-        await state.set_state('admin_state')
+        await state.update_data({
+            "id": int(message.text)
+        })
+        await message.answer(text=_(f"🕔 Ushbu foydalanuvchini necha kunga blok qilmoqchisiz?", locale=user['lang']))
+        await state.set_state('how_many_times')
     except Exception as e:
         print(e)
         await message.answer(text=_(f"😕 Kechirasiz bro siz id raqam no'tog'ri kiritdingiz yoki bunday id raqamli foydalanuvchi mavjud emas!‼️",locale=user['lang']))
         await state.set_state('send_id_to_block_user')
+
+@dp.message_handler(state='how_many_times')
+async def how_many_times_handler(message: types.Message, state: FSMContext):
+    user = await user_settings.get_user(chat_id=message.chat.id)
+    try:
+        await state.update_data({
+            'day': int(message.text)
+        })
+        data = await state.get_data()
+        await admins.block_user(data=data, date=message.date)
+        adminga = _(f"✅ Foydalanuvchi ", locale=user['lang'])
+        adminga += message.text
+        adminga += _(f" kunga bloklandi.", locale=user['lang'])
+        await message.answer(text=adminga, reply_markup=await admin_keyboards.admins_panel(lang=user['lang']))
+    except Exception as e:
+        print(e)
+        await message.answer(text=_(f"😕 Kechirasiz bro. Siz bloklamoqchi bo'lgan foydalanuvchi id raqamini yoki vaqtni to'gri kiritmadingiz. Qayta urinib korishingiz mumkin.", locale=user['lang']), reply_markup=await admin_keyboards.admins_panel(lang=user['lang']))
+        await state.set_state('admin_state')
 
 @dp.message_handler(state='send_id_to_delete_user')
 async def delete_user_handler(message: types.Message, state: FSMContext):

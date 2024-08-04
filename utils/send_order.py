@@ -2,7 +2,7 @@ from loader import user_settings, dp, basket_settings, menu
 import random
 from data.config import env
 
-async def send_order_to_channel(chat_id, date, data: dict):
+async def send_order_to_channel(chat_id, date, data: dict, plus_sum=15000):
     user = await user_settings.get_user(chat_id=chat_id)
     number = ""
     for i in range(6):
@@ -39,13 +39,13 @@ async def send_order_to_channel(chat_id, date, data: dict):
     adminga += f"\n↩️ Buyurtma turi: <b>{order_type}</b>"
     if data['order_type'] == 0:
         adminga += f"\n📍Joylashuv: {data['address']}\n"
+        adminga += f"🚚 Dostavka narxi: {plus_sum}\n"
+        total += plus_sum
     adminga += f"\n💰 Ja'mi: {total}"
     if data.get('address', None):
-        print(11)
         await user_settings.add_history_buys(user_id=user['id'], number=int(number), total=int(int(total)), address=data['address'], date=date, order_type=order_type)
         await dp.bot.send_location(chat_id=env.int('CHANNEL_ID'), latitude=data['latitude'],longitude=data['longitude'])
     else:
-        print(22)
         await user_settings.add_history_buys(user_id=user['id'], number=int(number), total=int(int(total)), filial=data['filial'], date=date, order_type=order_type)
     await dp.bot.send_message(chat_id=env.int('CHANNEL_ID'), text=adminga)
     return number

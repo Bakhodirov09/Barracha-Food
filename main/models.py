@@ -13,6 +13,8 @@ users = Table(
     Column('username', String),
     Column('chat_id', BigInteger),
     Column('status', Boolean, default=True),
+    Column('time', DateTime, nullable=True),
+    Column('days', Integer, nullable=True),
     Column('lang', String),
 )
 

@@ -3,6 +3,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 from loader import _, admins, user_settings, dp, types, basket_settings, menu
 from all_keyboards import user_keyboards, admin_keyboards
+from middlewares.check_order_time import CheckOrderTime
+
 
 @dp.message_handler(state='*', text=['❌ Bekor qilish', '❌ Отмена', '🏘 Asosiy menyu', '🏘 Главное меню'])
 async def cancel_handler(message: types.Message, state: FSMContext):
@@ -35,6 +37,9 @@ async def basket_handler(message: types.Message, state: FSMContext):
             total += product['quantity'] * mah['price']
         userga += _(f"\n💰 Ja'mi: ")
         userga += f"<b>{total}</b>"
+        await state.update_data({
+            'total': total
+        })
         await message.answer(text=userga, reply_markup=basket_btn)
         await state.set_state('in_basket')
     else:
@@ -60,6 +65,9 @@ async def basket_handler(call: types.CallbackQuery, state: FSMContext):
             total += product['quantity'] * mah['price']
         userga += _(f"\n💰 Ja'mi: ")
         userga += f"<b>{total}</b>"
+        await state.update_data({
+            'total': total
+        })
         await call.message.answer(text=userga, reply_markup=basket_btn)
         await state.set_state('in_basket')
     else:
@@ -93,5 +101,8 @@ async def in_basket_handler(message: types.Message, state: FSMContext):
             await message.answer(text=userga, reply_markup=basket_btn)
             await state.set_state('in_basket')
     else:
+        check_order = CheckOrderTime()
+        if not await check_order.check_order_time(message, user):
+            return
         await message.answer(text=_(f"🤗 Buyurtma turini tanlang.", locale=user['lang']), reply_markup=await user_keyboards.order_type(lang=user['lang']))
         await state.set_state('select_order_type')

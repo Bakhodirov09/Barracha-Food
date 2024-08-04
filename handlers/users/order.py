@@ -1,14 +1,8 @@
-import random
-
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-
-from data.config import env
-from loader import dp, types, _, user_settings, basket_settings, menu, other
+from loader import dp, types, _, user_settings, other
 from location import get_location_name
 from all_keyboards import user_keyboards
 from aiogram.dispatcher import FSMContext
-import requests
-
 from utils.send_order import send_order_to_channel
 
 
@@ -18,7 +12,9 @@ async def select_order_type_handler(message: types.Message, state: FSMContext):
     num = 0
     if message.text[0] == "🚚":
         num = 0
-        await message.answer(text=_(f"🤗 Yetkazib berish joylashuvini yuboring yoki '🗺 Mening manzillarim' tugmasi orqali manzil tanlang.", locale=user['lang']), reply_markup=await user_keyboards.locations(lang=user['lang']))
+        data = await state.get_data()
+        userga = _(f"\n🤗 Davom etish uchun yetkazib berish joylashuvini yuboring yoki '🗺 Mening manzillarim' tugmasi orqali manzil tanlang.", locale=user['lang'])
+        await message.answer(text=userga, reply_markup=await user_keyboards.locations(lang=user['lang']))
         await state.set_state('select_or_send_location')
     elif message.text[0] == "🚶":
         num = 1
@@ -85,15 +81,42 @@ async def accept_location_handler(message: types.Message, state: FSMContext):
     user = await user_settings.get_user(chat_id=message.chat.id)
     if message.text[0] == "✅":
         data = await state.get_data()
+        await state.update_data({
+            'address': data['address'],
+            'latitude': data['latitude'],
+            'longitude': data['longitude']
+        })
+        await user_settings.add_to_locations(user_id=user['id'], location=data['address'], latitude=data['latitude'], longitude=data['longitude'])
+        if "sergeli" in data['address'].lower():
+            userga = _(f"✅ Buyurtmangiz qabul qilindi\n🆔 Buyurtma raqamingiz: ")
+            number = await send_order_to_channel(chat_id=message.chat.id, date=message.date, data=data, plus_sum=0)
+            userga += number
+            await message.answer(text=userga, reply_markup=await user_keyboards.users_panel(lang=user['lang']))
+            await state.set_state('in_start')
+        else:
+            userga = _(f"‼️ Eslatib o'tamiz hurmatli foydalanuvchi. Bizda dostavka xizmatimiz sergelidan boshqa hududlarga 15000 so'm bo'lganligi sabab sizning ja'mi to'laydigan summangiz: ")
+            userga += f"<b>{data['total'] + 15000}</b> "
+            userga += _(f"so'm bo'ladi‼️\n\nUshbu miqdordagi summani to'lashga rozimisiz?")
+            await message.answer(text=userga, reply_markup=await user_keyboards.accept(lang=user['lang']))
+            await state.set_state('accept_to_pay_sum')
+    elif message.text[0] == "❌":
+        await message.answer(text=_(f"‼️Iltimos qayta manzil yuboring.", locale=user['lang']), reply_markup=await user_keyboards.locations(lang=user['lang']))
+        await state.set_state('select_or_send_location')
+
+@dp.message_handler(state='accept_to_pay_sum')
+async def accept_to_pay_sum_handler(message: types.Message, state: FSMContext):
+    user = await user_settings.get_user(chat_id=message.chat.id)
+    if message.text[0] == "✅":
+        data = await state.get_data()
         await user_settings.add_to_locations(user_id=user['id'], location=data['address'], latitude=data['latitude'], longitude=data['longitude'])
         userga = _(f"✅ Buyurtmangiz qabul qilindi\n🆔 Buyurtma raqamingiz: ")
         number = await send_order_to_channel(chat_id=message.chat.id, date=message.date, data=data)
         userga += number
         await message.answer(text=userga, reply_markup=await user_keyboards.users_panel(lang=user['lang']))
-        await state.set_state('in_start')
-    elif message.text[0] == "❌":
-        await message.answer(text=_(f"‼️Iltimos qayta manzil yuboring.", locale=user['lang']), reply_markup=await user_keyboards.locations(lang=user['lang']))
-        await state.set_state('select_or_send_location')
+    else:
+        await message.answer(text=_(f"✅ Buyurtmangiz bekor qilindi.", locale=user['lang']), reply_markup=await user_keyboards.users_panel(lang=user['lang']))
+    await state.set_state('in_start')
+
 
 @dp.message_handler(state='select_or_send_location')
 async def select_location_handler(message: types.Message, state: FSMContext):
@@ -123,11 +146,18 @@ async def select_location_handler(message: types.Message, state: FSMContext):
             'longitude': user_location['longitude'],
         })
         data = await state.get_data()
-        number = await send_order_to_channel(chat_id=message.chat.id, date=message.date, data=data)
-        userga = _(f"✅ Buyurtmangiz qabul qilindi\n🆔 Buyurtma raqamingiz: ")
-        userga += number
-        await message.answer(text=userga, reply_markup=await user_keyboards.users_panel(lang=user['lang']))
-        await state.set_state('in_start')
+        if "sergeli" in message.text.lower():
+            number = await send_order_to_channel(chat_id=message.chat.id, date=message.date, data=data, plus_sum=0)
+            userga = _(f"✅ Buyurtmangiz qabul qilindi\n🆔 Buyurtma raqamingiz: ")
+            userga += number
+            await message.answer(text=userga, reply_markup=await user_keyboards.users_panel(lang=user['lang']))
+            await state.set_state('in_start')
+        else:
+            userga = _(f"‼️ Eslatib o'tamiz hurmatli foydalanuvchi. Bizda dostavka xizmatimiz sergelidan boshqa hududlarga 15000 so'm bo'lganligi sabab sizning ja'mi to'laydigan summangiz: ")
+            userga += f"<b>{data['total'] + 15000}</b> "
+            userga += _(f"so'm bo'ladi‼️\n\nUshbu miqdordagi summani to'lashga rozimisiz?")
+            await message.answer(text=userga, reply_markup=await user_keyboards.accept(lang=user['lang']))
+            await state.set_state('accept_to_pay_sum')
     else:
         await message.answer(text=_(f"😕 Kechirasiz siz noto'g'ri manzil tanladingiz.", locale=user['lang']), reply_markup=await user_keyboards.locations(lang=user['lang']))
         await state.set_state('select_or_send_location')

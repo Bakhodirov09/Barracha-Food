@@ -38,9 +38,10 @@ async def in_foods_handler(call: types.CallbackQuery, state: FSMContext):
         menu_btn.insert(InlineKeyboardButton(text=_(f"🛍 Savat", locale=user['lang']), callback_data='basket'))
         stock_status = await other.get_stock_status()
         if stock_status:
-            menu_btn.insert(InlineKeyboardButton(text=_(f"Aksiya", locale=user['lang']), callback_data='stock'))
+            menu_btn.insert(InlineKeyboardButton(text=_(f"🎉 Aksiya", locale=user['lang']), callback_data=f"{stock_status['name']}_{stock_status['id']}"))
         for menyu in await menu.get_menu(lang=user['lang']):
-            menu_btn.insert(InlineKeyboardButton(text=menyu['name'], callback_data=f"{menyu['name']}_{menyu['id']}"))
+            if menyu['name'] != 'Aksiya':
+                menu_btn.insert(InlineKeyboardButton(text=menyu['name'], callback_data=f"{menyu['name']}_{menyu['id']}"))
         await call.message.answer(text=_(f"😋 Bizning menyu", locale=user['lang']), reply_markup=await user_keyboards.main_menu_basket(lang=user['lang']))
         await call.message.answer_photo(photo=logo['photo'], reply_markup=menu_btn)
         await state.set_state('in_menu')

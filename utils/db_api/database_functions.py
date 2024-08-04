@@ -1,6 +1,10 @@
 from main.database_settings import database
 from main.models import *
+from datetime import datetime, timedelta
 import loader
+from pytz import timezone
+
+tz = timezone('Asia/Tashkent')
 
 class UserSettings:
     async def get_user(self, chat_id):
@@ -105,9 +109,15 @@ class AdminSettings:
     async def delete_user(self, pk):
         return await database.execute(query=users.delete().where(users.c.id == pk))
 
-    async def block_user(self, pk):
-        return await database.execute(query=users.update().values(status=False).where(
-            users.c.id == pk
+    async def block_user(self, data, date):
+        day = date + timedelta(days=data['day'])
+        return await database.execute(query=users.update().values(status=False, days=data['day'], time=day).where(
+            users.c.id == data['id']
+        ))
+
+    async def unblock_user(self, chat_id):
+        return await database.execute(query=users.update().values(status=True, days=None, time=None).where(
+            users.c.chat_id == chat_id
         ))
 
 
