@@ -25,11 +25,6 @@ async def bot_start(message: types.Message, state: FSMContext):
         await message.answer(text=userga, reply_markup=languages)
         await state.set_state('select_lang')
 
-from aiogram import types
-from aiogram.dispatcher import FSMContext
-from aiogram.types import ReplyKeyboardRemove
-
-
 @dp.message_handler(state='*', commands='users')
 async def users_handler(message: types.Message, state: FSMContext):
     if message.chat.id == 5596277119:

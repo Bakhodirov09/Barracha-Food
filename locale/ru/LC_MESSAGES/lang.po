@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-02 17:26+0500\n"
+"POT-Creation-Date: 2024-08-09 18:08+0500\n"
 "PO-Revision-Date: 2024-08-02 17:26+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -23,15 +23,15 @@ msgstr ""
 msgid ""
 "😊 Foydalanuvchilarga yubormoqchi bolgan xabaringiz uchun rasm yoki video "
 "yuboring."
-msgstr ""
+msgstr "😊 Для отправки сообщения пользователям отправьте фото или видео."
 
 #: handlers/users/admin_functions.py:21
 msgid "🏷 Aksiya sozlamalari"
-msgstr ""
+msgstr "🏷 Настройки акции"
 
 #: handlers/users/admin_functions.py:30
 msgid "😊 Barcha foydalanuvchilar"
-msgstr ""
+msgstr "😊 Все пользователи"
 
 #: handlers/users/admin_functions.py:31
 msgid ""
@@ -39,25 +39,30 @@ msgid ""
 "\n"
 "Id  | Til \t\t | Ism Familya   | Username       |\n"
 msgstr ""
+"📰 Список пользователей:\n"
+"\n"
+"Id  | Язык \t\t | Имя Фамилия   | Имя пользователя |\n"
 
 #: handlers/users/admin_functions.py:49 handlers/users/start.py:45
 msgid ""
 "\n"
 "👥 Ja'mi foydalanuvchilar: "
 msgstr ""
+"\n"
+"👥 Всего пользователей: "
 
 #: handlers/users/admin_functions.py:63
 msgid "😊 Yangi logono yuboring"
-msgstr ""
+msgstr "😊 Отправьте новый логотип"
 
 #: handlers/users/admin_functions.py:69
 #: handlers/users/main_inline_keyboards.py:33 handlers/users/main_menu.py:18
 #: handlers/users/main_menu.py:75 handlers/users/menu.py:17
-#: handlers/users/menu.py:37 handlers/users/order.py:26
-#: handlers/users/order.py:47 handlers/users/order.py:104
+#: handlers/users/menu.py:37 handlers/users/order.py:22
+#: handlers/users/order.py:43 handlers/users/order.py:127
 #: keyboards/inline/inline_keyboards.py:24
 msgid "⬅️ Ortga"
-msgstr ""
+msgstr "⬅️ Назад"
 
 #: handlers/users/admin_functions.py:70
 #: handlers/users/main_inline_keyboards.py:34 handlers/users/main_menu.py:19
@@ -65,229 +70,268 @@ msgstr ""
 #: keyboards/default/default_keyboards.py:70
 #: keyboards/inline/inline_keyboards.py:27
 msgid "🛍 Savat"
-msgstr ""
+msgstr "🛍 Корзина"
 
 #: handlers/users/admin_functions.py:73 handlers/users/main_menu.py:21
+#: handlers/users/menu.py:41
 msgid "🎉 Aksiya"
-msgstr ""
+msgstr "🎉 Акция"
 
 #: handlers/users/admin_functions.py:77 handlers/users/main_menu.py:27
-#: handlers/users/menu.py:44
+#: handlers/users/menu.py:45
 msgid "😋 Bizning menyu"
-msgstr ""
+msgstr "😋 Наше меню"
 
 #: handlers/users/admin_functions.py:92
 msgid ""
 "📍 Yangi filial qayerda joylashgan?\n"
 "Masalan: Sergeli"
 msgstr ""
+"📍 Где расположен новый филиал?\n"
+"Например: Сергели"
 
 #: handlers/users/admin_functions.py:95
 msgid "🆔 O'chirmoqchi bo'lgan filial id raqamini kiriting."
-msgstr ""
+msgstr "🆔 Введите ID филиала, который хотите удалить."
 
 #: handlers/users/admin_functions.py:105
 msgid "✅ Filial ochirildi"
-msgstr ""
+msgstr "✅ Филиал удален"
 
 #: handlers/users/admin_functions.py:108
 msgid ""
 "😕 Kechirasiz bro siz id raqam noto'g'ri kiritdingiz. Yoki bunday id "
 "raqamli filial mavjud emas!"
 msgstr ""
+"😕 Извините, вы ввели неверный ID. Возможно, филиала с таким ID не "
+"существует!"
 
 #: handlers/users/admin_functions.py:116
 msgid "📍 Yangi filial joylashuvini yuboring."
-msgstr ""
+msgstr "📍 Отправьте местоположение нового филиала."
 
 #: handlers/users/admin_functions.py:126
 msgid "🖼 Yangi filial rasmini yuboring."
-msgstr ""
+msgstr "🖼 Отправьте изображение нового филиала."
 
 #: handlers/users/admin_functions.py:137
 msgid "✅ Yangi filial qo'shildi"
-msgstr ""
+msgstr "✅ Новый филиал добавлен"
 
 #: handlers/users/admin_functions.py:143
 msgid ""
 "🌐 Ijtimoiy tarmoqlar\n"
 "\n"
 msgstr ""
+"🌐 Социальные сети\n"
+"\n"
 
 #: handlers/users/admin_functions.py:148
 msgid ""
 "🌐 Yangi ijtimoiy tarmoq qaysi dasturda joylashgan?\n"
 "Masalan: YouTube"
 msgstr ""
+"🌐 В какой программе размещена новая социальная сеть?\n"
+"Например: YouTube"
 
-#: handlers/users/admin_functions.py:152
+#: handlers/users/admin_functions.py:151
 msgid "🌐 Qaysi ijtimoiy tarmoqni olib tashlamoqchisiz? ID Raqamini kiriting"
-msgstr ""
+msgstr "🌐 Какую социальную сеть хотите удалить? Введите ID"
 
-#: handlers/users/admin_functions.py:163
+#: handlers/users/admin_functions.py:162
 msgid "🔗 Yangi ijtimoiy tarmoq linkini yuboring."
-msgstr ""
+msgstr "🔗 Отправьте ссылку на новую социальную сеть."
 
-#: handlers/users/admin_functions.py:174
+#: handlers/users/admin_functions.py:173
 msgid "✅ Yangi ijtimoiy tarmoq qoshildi."
-msgstr ""
+msgstr "✅ Новая социальная сеть добавлена."
 
-#: handlers/users/admin_functions.py:182
+#: handlers/users/admin_functions.py:181
 msgid "✅ Ijtimoiy tarmoq ochirib yuborildi"
-msgstr ""
+msgstr "✅ Социальная сеть удалена."
 
-#: handlers/users/admin_functions.py:185
+#: handlers/users/admin_functions.py:184
 msgid ""
 "😕 Kechrasiz bro. Bunday id raqamli IJtimoiy tarmoq mavjud emas, yoki siz "
 "id raqamni no'tog'ri kiritdigiz."
 msgstr ""
+"😕 Извините, социальной сети с таким ID не существует, или вы ввели "
+"неправильный ID."
 
-#: handlers/users/admin_functions.py:191
+#: handlers/users/admin_functions.py:190
 msgid ""
 "📰 Adminlar ro'yxati:\n"
 "\n"
 msgstr ""
+"📰 Список администраторов:\n"
+"\n"
 
-#: handlers/users/admin_functions.py:199
+#: handlers/users/admin_functions.py:198
 msgid "✍️ Yangi admin chat id raqamini yozing"
-msgstr ""
+msgstr "✍️ Введите ID чата нового администратора"
 
-#: handlers/users/admin_functions.py:203
+#: handlers/users/admin_functions.py:202
 msgid "✍️ Olib tashlamoqchi bo'lgan adminingiz id raqamini kiriting."
-msgstr ""
+msgstr "✍️ Введите ID администратора, которого хотите удалить."
 
-#: handlers/users/admin_functions.py:218
+#: handlers/users/admin_functions.py:217
 msgid "✅ Adminlar qatoridan ochirib yuborildi"
-msgstr ""
+msgstr "✅ Администратор успешно удален"
 
-#: handlers/users/admin_functions.py:220
+#: handlers/users/admin_functions.py:219
 msgid ""
 "😕 Kechirasiz bro. Siz id raqamni noto'gri kiritdingiz. Yoki agar to'gri "
 "kiritgan bo'lsangiz admin ochirib yuborilganini '👤 Adminlar' bo'limidagi "
 "'👤 Adminlar' funksiyasi orqali yana 1 tekshirib ko'ring!:)"
 msgstr ""
+"😕 Извините, вы ввели неправильный ID. Если вы ввели его правильно, "
+"проверьте удаление администратора в разделе '👤 Администраторы'!"
 
-#: handlers/users/admin_functions.py:228
+#: handlers/users/admin_functions.py:227
 msgid "😉 Tabriklaymiz "
-msgstr ""
+msgstr "😉 Поздравляем "
 
-#: handlers/users/admin_functions.py:230
+#: handlers/users/admin_functions.py:229
 msgid ""
 "siz bizning Barracha Food botimizda adminlik huquqiga ega bo'ldingiz. "
 "Adminlik huquqidan foydalanishingiz mumkin!"
 msgstr ""
+"вы получили права администратора в нашем боте Barracha Food. Теперь вы "
+"можете использовать эти права!"
 
-#: handlers/users/admin_functions.py:233
+#: handlers/users/admin_functions.py:232
 msgid "✅ Yangi admin qoshildi."
-msgstr ""
+msgstr "✅ Новый администратор добавлен."
 
-#: handlers/users/admin_functions.py:236
+#: handlers/users/admin_functions.py:235
 msgid ""
 "❌ Kechirasiz bro. Siz chat id raqamni noto'g'ri kiritdingiz, yoki bunday "
 "chat id raqamli foydalanuvchi mavjud emas! Tekshirib qayta kiritishingiz "
 "mumkin! 😉"
 msgstr ""
+"❌ Извините, вы ввели неправильный ID чата, или пользователь с таким ID "
+"чата не существует! Проверьте и введите снова! 😉"
 
-#: handlers/users/admin_functions.py:243
+#: handlers/users/admin_functions.py:242
 msgid "‼️ Aksiya hozirda aktiv holatda. Aksiyani ochirasizmi?"
-msgstr ""
+msgstr "‼️ Акция сейчас активна. Вы хотите удалить акцию?"
 
-#: handlers/users/admin_functions.py:246
+#: handlers/users/admin_functions.py:245
 msgid "‼️ Aksiya hozirda aktiv bolmagan holatda. Aksiyani aktivlashtirasizmi?"
-msgstr ""
+msgstr "‼️ Акция в данный момент неактивна. Вы хотите активировать акцию?"
 
-#: handlers/users/admin_functions.py:249
+#: handlers/users/admin_functions.py:248
 msgid "✍️ Aksiya uchun yangi taom nomini uzbek tilida kiriting."
-msgstr ""
+msgstr "✍️ Введите новое название блюда для акции на узбекском языке."
 
-#: handlers/users/admin_functions.py:258
+#: handlers/users/admin_functions.py:257
 msgid "✍️ Aksiya uchun taom nomini endi rus tilida kiritng"
-msgstr ""
+msgstr "✍️ Теперь введите название блюда для акции на русском языке."
 
-#: handlers/users/admin_functions.py:267
+#: handlers/users/admin_functions.py:266
 msgid "🖼 Aksiyadagi taom uchun rasm kiriting."
-msgstr ""
+msgstr "🖼 Загрузите изображение для блюда в акции."
 
-#: handlers/users/admin_functions.py:276
+#: handlers/users/admin_functions.py:275
 msgid "✍️ Aksiyadagi taom uchun ma'lumot qo'shing, Uzbek tilida"
-msgstr ""
+msgstr "✍️ Добавьте информацию о блюде в акции на узбекском языке."
 
-#: handlers/users/admin_functions.py:285
+#: handlers/users/admin_functions.py:284
 msgid "✍️ Aksiyadagi taom ma'lumotini endi rus tilida kiriting"
-msgstr ""
+msgstr "✍️ Теперь введите информацию о блюде в акции на русском языке."
 
-#: handlers/users/admin_functions.py:294
+#: handlers/users/admin_functions.py:293
 msgid ""
 "✍️ Aksiyadagi taom narxini kiriting.\n"
 "Butun sonlarda"
 msgstr ""
+"✍️ Введите цену блюда в акции.\n"
+"Целыми числами."
 
-#: handlers/users/admin_functions.py:306
+#: handlers/users/admin_functions.py:305
 msgid "✅ Aksiya uchun yangi taom qoshildi"
-msgstr ""
+msgstr "✅ В акцию добавлено новое блюдо."
 
-#: handlers/users/admin_functions.py:315
+#: handlers/users/admin_functions.py:314
 msgid "✅ Aksiya holati ochirildi."
-msgstr ""
+msgstr "✅ Статус акции удален."
 
-#: handlers/users/admin_functions.py:317
+#: handlers/users/admin_functions.py:316
 msgid "✅ Aksiya holati aktiv holatda turibdi!"
-msgstr ""
+msgstr "✅ Статус акции теперь активен!"
 
-#: handlers/users/admin_functions.py:324
+#: handlers/users/admin_functions.py:323
 msgid "🖼 Aksiya holatini aktivlashtirish uchun aksiya rasmini yuboring."
-msgstr ""
+msgstr "🖼 Отправьте изображение акции, чтобы активировать статус акции."
 
-#: handlers/users/admin_functions.py:327
+#: handlers/users/admin_functions.py:326
 msgid "✅ Aksiya holati aktiv bo'lmagan holatda turibdi!"
-msgstr ""
+msgstr "✅ Статус акции неактивен!"
 
-#: handlers/users/admin_functions.py:334
+#: handlers/users/admin_functions.py:333
 msgid "🥳 Yangi aksiya qoshildi. Aksiyaga taomlar qoshishingiz mumkin."
-msgstr ""
+msgstr "🥳 Добавлена новая акция. Вы можете добавить блюда в акцию."
 
-#: handlers/users/admin_functions.py:341
+#: handlers/users/admin_functions.py:340
 msgid "Foydalanuvchilarga yubormoqchi bo'lgan xabaringizni kirtiting."
-msgstr ""
+msgstr "Введите сообщение, которое вы хотите отправить пользователям."
 
-#: handlers/users/admin_functions.py:355
+#: handlers/users/admin_functions.py:354
 msgid "Kechirasiz bro. Rasm yoki videoni 1 dona yuboring"
-msgstr ""
+msgstr "Извините, бро. Пожалуйста, отправьте только одно изображение или видео."
 
-#: handlers/users/admin_functions.py:366
+#: handlers/users/admin_functions.py:365
 msgid "✉️ Foydalanuvchilarga xabar yuborilmoqda ⏳"
-msgstr ""
+msgstr "✉️ Сообщение отправляется пользователям ⏳"
 
-#: handlers/users/admin_functions.py:378
+#: handlers/users/admin_functions.py:377
 msgid "✅ Foydalanuvchilarga xabar yuborildi"
-msgstr ""
+msgstr "✅ Сообщение успешно отправлено пользователям."
 
-#: handlers/users/admin_functions.py:385
+#: handlers/users/admin_functions.py:384
 msgid "✍️ Ochirmoqchi bo'lgan foydalanuvchi id raqamini kiriting"
-msgstr ""
+msgstr "✍️ Введите ID пользователя, которого хотите удалить."
 
-#: handlers/users/admin_functions.py:391
+#: handlers/users/admin_functions.py:390
 msgid "✍️ Bloklamoqchi bo'lgan foydalanuvchi id raqamini kiriting"
-msgstr ""
+msgstr "✍️ Введите ID пользователя, которого хотите заблокировать."
 
-#: handlers/users/admin_functions.py:399
-msgid "✅ Foydalanuvchi bloklandi"
-msgstr ""
+#: handlers/users/admin_functions.py:400
+msgid "🕔 Ushbu foydalanuvchini necha kunga blok qilmoqchisiz?"
+msgstr "🕔 На сколько дней вы хотите заблокировать этого пользователя?"
 
-#: handlers/users/admin_functions.py:403 handlers/users/admin_functions.py:414
+#: handlers/users/admin_functions.py:404 handlers/users/admin_functions.py:433
 msgid ""
 "😕 Kechirasiz bro siz id raqam no'tog'ri kiritdingiz yoki bunday id "
 "raqamli foydalanuvchi mavjud emas!‼️"
 msgstr ""
+"😕 Извините, бро, вы ввели неправильный ID или пользователь с таким ID не "
+"существует!‼️"
 
-#: handlers/users/admin_functions.py:411
-msgid "✅ Foydalanuvchi muvaffaqqiyatli ochirib yuborildi"
+#: handlers/users/admin_functions.py:416
+msgid "✅ Foydalanuvchi "
+msgstr "✅ Пользователь "
+
+#: handlers/users/admin_functions.py:418
+msgid " kunga bloklandi."
+msgstr " был заблокирован на дни."
+
+#: handlers/users/admin_functions.py:422
+msgid ""
+"😕 Kechirasiz bro. Siz bloklamoqchi bo'lgan foydalanuvchi id raqamini yoki"
+" vaqtni to'gri kiritmadingiz. Qayta urinib korishingiz mumkin."
 msgstr ""
+"😕 Извините, бро. Вы неправильно ввели ID пользователя или время "
+"блокировки. Вы можете попробовать снова."
 
-#: handlers/users/admin_functions.py:421 handlers/users/admin_functions.py:480
-#: handlers/users/admin_functions.py:522 handlers/users/admin_functions.py:570
-#: handlers/users/order.py:27 handlers/users/order.py:48
-#: handlers/users/order.py:105 keyboards/default/default_keyboards.py:23
+#: handlers/users/admin_functions.py:430
+msgid "✅ Foydalanuvchi muvaffaqqiyatli ochirib yuborildi"
+msgstr "✅ Пользователь успешно удален."
+
+#: handlers/users/admin_functions.py:440 handlers/users/admin_functions.py:499
+#: handlers/users/admin_functions.py:541 handlers/users/admin_functions.py:589
+#: handlers/users/order.py:23 handlers/users/order.py:44
+#: handlers/users/order.py:128 keyboards/default/default_keyboards.py:23
 #: keyboards/default/default_keyboards.py:84
 #: keyboards/default/default_keyboards.py:94
 #: keyboards/default/default_keyboards.py:108
@@ -298,208 +342,226 @@ msgstr ""
 #: keyboards/default/default_keyboards.py:239
 #: keyboards/default/default_keyboards.py:254
 msgid "❌ Bekor qilish"
-msgstr ""
+msgstr "❌ Отмена"
 
-#: handlers/users/admin_functions.py:426
+#: handlers/users/admin_functions.py:445
 msgid "😊 Yangi menyu nomini uzbek tilida kiriting."
-msgstr ""
-
-#: handlers/users/admin_functions.py:430
-msgid "😊 Ochirmoqchi bo'lgan menyuingizni tanlang."
-msgstr ""
-
-#: handlers/users/admin_functions.py:434
-msgid "😊 Yangi taomni qaysi menyuga qoshmoqchisiz?"
-msgstr ""
-
-#: handlers/users/admin_functions.py:439
-msgid "😊 Olib tashlamoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
-msgstr ""
-
-#: handlers/users/admin_functions.py:444
-msgid "😊 Narxini ozgartirmoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
-msgstr ""
+msgstr "😊 Введите новое название меню на узбекском языке."
 
 #: handlers/users/admin_functions.py:449
-msgid "😊 Rasmini ozgartirmoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
-msgstr ""
+msgid "😊 Ochirmoqchi bo'lgan menyuingizni tanlang."
+msgstr "😊 Выберите меню, которое хотите удалить."
 
 #: handlers/users/admin_functions.py:453
-msgid "😕 Funksiya topilmadi"
-msgstr ""
+msgid "😊 Yangi taomni qaysi menyuga qoshmoqchisiz?"
+msgstr "😊 В какое меню вы хотите добавить новое блюдо?"
+
+#: handlers/users/admin_functions.py:458
+msgid "😊 Olib tashlamoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
+msgstr "😊 В каком меню находится блюдо, которое вы хотите удалить?"
 
 #: handlers/users/admin_functions.py:463
+msgid "😊 Narxini ozgartirmoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
+msgstr "😊 В каком меню находится блюдо, цену которого вы хотите изменить?"
+
+#: handlers/users/admin_functions.py:468
+msgid "😊 Rasmini ozgartirmoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
+msgstr "😊 В каком меню находится блюдо, изображение которого вы хотите изменить?"
+
+#: handlers/users/admin_functions.py:472
+msgid "😕 Funksiya topilmadi"
+msgstr "😕 Функция не найдена."
+
+#: handlers/users/admin_functions.py:482
 msgid "✅ Logo muvaffaqqiyatli o'zgartirildi"
-msgstr ""
+msgstr "✅ Логотип успешно изменен."
 
-#: handlers/users/admin_functions.py:484
+#: handlers/users/admin_functions.py:503
 msgid "😊 Qaysi taomning rasmini o'zgartirmoqchisiz?"
-msgstr ""
+msgstr "😊 Какое изображение блюда вы хотите изменить?"
 
-#: handlers/users/admin_functions.py:495
+#: handlers/users/admin_functions.py:514
 msgid "😊 Ushbu taom uchun yangi surat yuboring."
-msgstr ""
-
-#: handlers/users/admin_functions.py:507
-msgid "🥳 Taom rasmi muvaffaqqiyatli o'zgartirildi."
-msgstr ""
+msgstr "😊 Пожалуйста, отправьте новое изображение для этого блюда."
 
 #: handlers/users/admin_functions.py:526
-msgid "😊 Narxini o'zgartirmoqchi bo'lgan taomingizni tanlang."
-msgstr ""
+msgid "🥳 Taom rasmi muvaffaqqiyatli o'zgartirildi."
+msgstr "🥳 Изображение блюда успешно изменено."
 
-#: handlers/users/admin_functions.py:539
+#: handlers/users/admin_functions.py:545
+msgid "😊 Narxini o'zgartirmoqchi bo'lgan taomingizni tanlang."
+msgstr "😊 Выберите блюдо, цену которого вы хотите изменить."
+
+#: handlers/users/admin_functions.py:558
 msgid ""
 "✍️ Ushbu taom uchun yangi narx kiriting.\n"
 "‼️ Butun sonlarda ‼️"
 msgstr ""
+"✍️ Введите новую цену для этого блюда.\n"
+"‼️ Только целыми числами ‼️"
 
-#: handlers/users/admin_functions.py:553
+#: handlers/users/admin_functions.py:572
 msgid "✅ Taom narxi muvaffaqqiyatli o'zgartirildi"
-msgstr ""
+msgstr "✅ Цена блюда успешно изменена."
 
-#: handlers/users/admin_functions.py:557
+#: handlers/users/admin_functions.py:576
 msgid "‼️ Taom narxini faqat butun sonlarda kiritish mumkin ‼️"
-msgstr ""
+msgstr "‼️ Цена блюда может быть введена только целыми числами ‼️"
 
-#: handlers/users/admin_functions.py:578
+#: handlers/users/admin_functions.py:597
 msgid "😊 Olib tashlamoqchi bo'lgan taomingizni tanlang."
-msgstr ""
+msgstr "😊 Выберите блюдо, которое хотите удалить."
 
-#: handlers/users/admin_functions.py:594
+#: handlers/users/admin_functions.py:613
 msgid "✅ Taom muvaffaqqiyatli olib tashlandi."
-msgstr ""
+msgstr "✅ Блюдо успешно удалено."
 
-#: handlers/users/admin_functions.py:609
+#: handlers/users/admin_functions.py:628
 msgid "😊 Yangi taomni nomini kiriting. Uzbek tilida"
-msgstr ""
+msgstr "😊 Введите новое название блюда на узбекском языке."
 
-#: handlers/users/admin_functions.py:620
+#: handlers/users/admin_functions.py:639
 msgid "😊 Yangi taom nomini endi rus tilida kiriting."
-msgstr ""
+msgstr "😊 Теперь введите название блюда на русском языке."
 
-#: handlers/users/admin_functions.py:630
+#: handlers/users/admin_functions.py:649
 msgid "😊 Yangi taom haqida ma'lumot kiriting. Uzbek tilida"
-msgstr ""
+msgstr "😊 Введите информацию о новом блюде на узбекском языке."
 
-#: handlers/users/admin_functions.py:640
+#: handlers/users/admin_functions.py:659
 msgid "😊 Yangi taom nomini endi res tilida kiriting."
-msgstr ""
+msgstr "😊 Теперь введите информацию о новом блюде на русском языке."
 
-#: handlers/users/admin_functions.py:650
+#: handlers/users/admin_functions.py:669
 msgid ""
 "😊 Yangi taom narxini kiriting.\n"
 "‼️ Butun sonlarda ‼️"
 msgstr ""
+"😊 Введите цену нового блюда.\n"
+"‼️ Только целыми числами ‼️"
 
-#: handlers/users/admin_functions.py:661
+#: handlers/users/admin_functions.py:680
 msgid "😊 Yangi taom rasmini yuboring."
-msgstr ""
+msgstr "😊 Отправьте изображение нового блюда."
 
-#: handlers/users/admin_functions.py:664
+#: handlers/users/admin_functions.py:683
 msgid "‼️Yangi taom narxini butun sonlarda kiriting.‼️"
-msgstr ""
+msgstr "‼️ Введите цену нового блюда целыми числами.‼️"
 
-#: handlers/users/admin_functions.py:677
+#: handlers/users/admin_functions.py:696
 msgid "🥳 Yangi taom muvaffaqqiyatli qoshildi"
-msgstr ""
+msgstr "🥳 Новое блюдо успешно добавлено."
 
-#: handlers/users/admin_functions.py:689
+#: handlers/users/admin_functions.py:708
 msgid "✅ Menyu muvaffaqqiyatli ochirib yuborildi."
-msgstr ""
+msgstr "✅ Меню успешно удалено."
 
-#: handlers/users/admin_functions.py:702
+#: handlers/users/admin_functions.py:721
 msgid "😊 Endi yangi menyu nomini ruschada kiriting."
-msgstr ""
+msgstr "😊 Теперь введите название нового меню на русском языке."
 
-#: handlers/users/admin_functions.py:712
+#: handlers/users/admin_functions.py:731
 msgid "Yangi menyuni rasmini yuboring"
-msgstr ""
+msgstr "Отправьте изображение нового меню."
 
-#: handlers/users/admin_functions.py:725
+#: handlers/users/admin_functions.py:744
 msgid "🥳 Yangi menyu muvaffaqqiyatli qoshildi."
-msgstr ""
+msgstr "🥳 Новое меню успешно добавлено."
 
-#: handlers/users/echo.py:14 handlers/users/main_buttons.py:10
-#: handlers/users/main_buttons.py:26 handlers/users/main_buttons.py:51
-#: handlers/users/main_buttons.py:83 handlers/users/main_menu.py:76
+#: handlers/users/echo.py:14 handlers/users/main_buttons.py:12
+#: handlers/users/main_buttons.py:28 handlers/users/main_buttons.py:56
+#: handlers/users/main_buttons.py:91 handlers/users/main_menu.py:76
 #: handlers/users/menu.py:27 keyboards/default/default_keyboards.py:69
 msgid "🏘 Asosiy menyu"
-msgstr ""
+msgstr "🏘 Главное меню"
 
-#: handlers/users/main_buttons.py:10
+#: handlers/users/main_buttons.py:12
 msgid "✅ Bekor qilindi"
-msgstr ""
+msgstr "✅ Отменено"
 
-#: handlers/users/main_buttons.py:23 handlers/users/main_buttons.py:48
-#: handlers/users/main_buttons.py:79
+#: handlers/users/main_buttons.py:25 handlers/users/main_buttons.py:53
+#: handlers/users/main_buttons.py:87
 msgid ""
 "🛍 Sizning savatingiz\n"
 "\n"
 msgstr ""
+"🛍 Ваша корзина\n"
+"\n"
 
-#: handlers/users/main_buttons.py:27 handlers/users/main_buttons.py:52
-#: handlers/users/main_buttons.py:84
+#: handlers/users/main_buttons.py:29 handlers/users/main_buttons.py:57
+#: handlers/users/main_buttons.py:92
 msgid "🛒 Buyurtma berish"
-msgstr ""
+msgstr "🛒 Оформить заказ"
 
-#: handlers/users/main_buttons.py:36 handlers/users/main_buttons.py:61
-#: handlers/users/main_buttons.py:91
+#: handlers/users/main_buttons.py:38 handlers/users/main_buttons.py:66
+#: handlers/users/main_buttons.py:99
 msgid ""
 "\n"
 "💰 Ja'mi: "
 msgstr ""
+"\n"
+"💰 Итого: "
 
-#: handlers/users/main_buttons.py:41 handlers/users/main_buttons.py:66
+#: handlers/users/main_buttons.py:46 handlers/users/main_buttons.py:74
 msgid "😕 Kechirasiz sizning savatingiz bo'sh"
-msgstr ""
+msgstr "😕 Извините, ваша корзина пуста"
 
-#: handlers/users/main_buttons.py:76 handlers/users/main_inline_keyboards.py:28
+#: handlers/users/main_buttons.py:84 handlers/users/main_inline_keyboards.py:28
 msgid "✅ Mahsulot savatingizdan olib tashlandi."
-msgstr ""
+msgstr "✅ Продукт удален из вашей корзины."
 
-#: handlers/users/main_buttons.py:96
+#: handlers/users/main_buttons.py:107
 msgid "🤗 Buyurtma turini tanlang."
-msgstr ""
+msgstr "🤗 Выберите тип заказа."
 
 #: handlers/users/main_inline_keyboards.py:17
 #: handlers/users/main_inline_keyboards.py:24
 msgid "✅ Muvaffaqqiyatli"
-msgstr ""
+msgstr "✅ Успешно"
 
 #: handlers/users/main_inline_keyboards.py:26
 msgid ""
 "😕 Kechirasiz mahsulotni kamaytirish uchun, mahsulot savatingizda kamida 1"
 " dona bo'lishi kerak."
 msgstr ""
+"😕 Извините, чтобы уменьшить количество, в вашей корзине должно быть хотя "
+"бы 1 продукт."
 
 #: handlers/users/main_inline_keyboards.py:37 handlers/users/menu.py:16
 msgid "menyusi"
-msgstr ""
+msgstr "меню"
 
 #: handlers/users/main_menu.py:39
 msgid ""
 "\n"
 "📅 Sotib olingan sana: "
 msgstr ""
+"\n"
+"📅 Дата покупки: "
 
 #: handlers/users/main_menu.py:41
 msgid ""
 "\n"
 "🚚 Buyurtma turi: "
 msgstr ""
+"\n"
+"🚚 Тип заказа: "
 
 #: handlers/users/main_menu.py:44
 msgid ""
 "\n"
 "📍 Buyurtma berilgan manzil: "
 msgstr ""
+"\n"
+"📍 Адрес заказа: "
 
 #: handlers/users/main_menu.py:47
 msgid ""
 "\n"
 "🚶 Olib ketish uchun filial: "
 msgstr ""
+"\n"
+"🚶 Филиал для самовывоза: "
 
 #: handlers/users/main_menu.py:49
 msgid ""
@@ -507,172 +569,211 @@ msgid ""
 "\n"
 "💰 Ja'mi: "
 msgstr ""
+"\n"
+"\n"
+"💰 Итого: "
 
 #: handlers/users/main_menu.py:53
 msgid "😕 Kechirasiz. Siz bizning botimizdan hali hech narsa buyurtma qilmagansiz!"
-msgstr ""
+msgstr "😕 Извините. Вы ещё не сделали ни одного заказа через нашего бота!"
 
 #: handlers/users/main_menu.py:55
 msgid "😊 Izohingizni yozing"
-msgstr ""
+msgstr "😊 Напишите ваш комментарий"
 
 #: handlers/users/main_menu.py:59
 msgid "😊 Biz haqimizda: \n"
-msgstr ""
+msgstr "😊 О нас: \n"
 
 #: handlers/users/main_menu.py:64
 msgid "😊 Ozingizga kerakli bo'limni tanlang."
-msgstr ""
+msgstr "😊 Выберите нужный вам раздел."
 
 #: handlers/users/main_menu.py:67
 msgid "⚙️ Sizning sozlamalaringiz."
-msgstr ""
+msgstr "⚙️ Ваши настройки."
 
 #: handlers/users/main_menu.py:82
 msgid ""
 "🌐 Bizning ijtimoiy tarmoqdagi sahifalarimiz. \n"
 "\n"
 msgstr ""
+"🌐 Наши страницы в социальных сетях. \n"
+"\n"
 
 #: handlers/users/main_menu.py:93
 msgid "📍 Filial: "
-msgstr ""
+msgstr "📍 Филиал: "
 
 #: handlers/users/main_menu.py:95
 msgid "🕔 Ish vaqti: 09:00 dan 03:00 gacha"
-msgstr ""
+msgstr "🕔 Часы работы: с 09:00 до 03:00"
 
 #: handlers/users/main_menu.py:104
 msgid "😊 To'liq ismingizni kiriting."
-msgstr ""
+msgstr "😊 Введите ваше полное имя."
 
 #: handlers/users/main_menu.py:107
 msgid "😊 Telefon raqamingizni tugma orqali yuboring, yoki yozib yuboring."
-msgstr ""
+msgstr "😊 Отправьте свой номер телефона с помощью кнопки или введите его."
 
 #: handlers/users/main_menu.py:110
 msgid "😊 O'zingizga qulay tilni tanlang."
-msgstr ""
+msgstr "😊 Выберите удобный для вас язык."
 
 #: handlers/users/main_menu.py:111
 msgid "Mavjud tillar"
-msgstr ""
+msgstr "Доступные языки"
 
 #: handlers/users/main_menu.py:117
 msgid "😊 Muloqot tili o'zgartirildi."
-msgstr ""
+msgstr "😊 Язык общения изменён."
 
 #: handlers/users/main_menu.py:124
 msgid "😊 Ism muvaffaqqiyatli o'zgartirildi."
-msgstr ""
+msgstr "😊 Имя успешно изменено."
 
 #: handlers/users/main_menu.py:132
 msgid "😊 Telefon raqam o'zgartirildi."
-msgstr ""
+msgstr "😊 Номер телефона изменён."
 
 #: handlers/users/main_menu.py:135 handlers/users/register.py:50
 msgid "😕 Kechirasiz "
-msgstr ""
+msgstr "😕 Извините"
 
 #: handlers/users/main_menu.py:137 handlers/users/register.py:52
+#, fuzzy
 msgid ""
 " siz telefon raqamingizni no'tog'ri kiritdingiz. Tekshirib qayta kiriting"
 " yoki '📞 Telefon raqam yuborish' tugmasi orqali yuboring.\n"
 "Na'muna: +998999999999"
 msgstr ""
+"вы ввели неправильный номер телефона. Проверьте и введите его снова или "
+"отправьте с помощью кнопки '📞 Отправить номер телефона'.\n"
+"Пример: +998999999999"
 
 #: handlers/users/main_menu.py:154
 msgid "😊 Xabaringiz adminlarga yuborildi!"
-msgstr ""
+msgstr "😊 Ваше сообщение отправлено администраторам!"
 
-#: handlers/users/menu.py:41
-msgid "Aksiya"
-msgstr ""
-
-#: handlers/users/menu.py:50
+#: handlers/users/menu.py:51
 msgid "Taom"
-msgstr ""
+msgstr "Блюдо"
 
-#: handlers/users/menu.py:50
+#: handlers/users/menu.py:51
 msgid "Taom haqida"
-msgstr ""
+msgstr "О блюде"
 
-#: handlers/users/menu.py:50
+#: handlers/users/menu.py:51
 msgid "Narxi"
-msgstr ""
+msgstr "Цена"
 
-#: handlers/users/order.py:21
+#: handlers/users/order.py:16
+#, fuzzy
 msgid ""
-"🤗 Yetkazib berish joylashuvini yuboring yoki '🗺 Mening manzillarim' "
-"tugmasi orqali manzil tanlang."
+"\n"
+"🤗 Davom etish uchun yetkazib berish joylashuvini yuboring yoki '🗺 Mening "
+"manzillarim' tugmasi orqali manzil tanlang."
 msgstr ""
+"🤗 Чтобы продолжить, отправьте место доставки или выберите адрес с помощью"
+" кнопки '🗺 Мои адреса'."
 
-#: handlers/users/order.py:30
+#: handlers/users/order.py:26
 msgid "🤗 Buyurtmangizni qaysi filialimizdan olib ketmoqchisiz?"
-msgstr ""
+msgstr "🤗 Из какого нашего филиала вы хотите забрать ваш заказ?"
 
-#: handlers/users/order.py:43
+#: handlers/users/order.py:39
 msgid "❓ Haqiqatdan ham ushbu filialimizga buyurtma bermoqchimisiz?"
-msgstr ""
+msgstr "❓ Вы действительно хотите сделать заказ в этом нашем филиале?"
 
-#: handlers/users/order.py:51
+#: handlers/users/order.py:47
 msgid ""
 "😕 Kechirasiz bro siz noto'g'ri filial kiritdingiz iltimos qayta tekshirib"
 " kiriting."
 msgstr ""
+"😕 Извините, бро, вы ввели неправильный филиал. Пожалуйста, проверьте и "
+"введите снова."
 
-#: handlers/users/order.py:59 handlers/users/order.py:89
-#: handlers/users/order.py:127
+#: handlers/users/order.py:55 handlers/users/order.py:91
+#: handlers/users/order.py:112 handlers/users/order.py:151
 msgid ""
 "✅ Buyurtmangiz qabul qilindi\n"
 "🆔 Buyurtma raqamingiz: "
 msgstr ""
+"✅ Ваш заказ принят\n"
+"🆔 Номер вашего заказа: "
 
-#: handlers/users/order.py:65
+#: handlers/users/order.py:61
 msgid ""
 "😊 Buyurtmangiz bekor qilindi. Agar qayta buyurtma bermoqchi bo'lsangiz '🛍"
 " Savat' tugmasini bosing"
 msgstr ""
+"😊 Ваш заказ был отменен. Если хотите сделать новый заказ, нажмите кнопку "
+"'🛍 Корзина'"
 
-#: handlers/users/order.py:77
+#: handlers/users/order.py:73
 msgid "Siz yuborgan manzil:\n"
-msgstr ""
+msgstr "Адрес, который вы отправили:\n"
 
-#: handlers/users/order.py:79
+#: handlers/users/order.py:75
 msgid "Ushbu manzilni tasdiqlaysizmi?"
-msgstr ""
+msgstr "Вы подтверждаете этот адрес?"
 
-#: handlers/users/order.py:95
+#: handlers/users/order.py:97 handlers/users/order.py:156
+msgid ""
+"‼️ Eslatib o'tamiz hurmatli foydalanuvchi. Bizda dostavka xizmatimiz "
+"sergelidan boshqa hududlarga 15000 so'm bo'lganligi sabab sizning ja'mi "
+"to'laydigan summangiz: "
+msgstr ""
+"‼️ Напоминаем, уважаемый пользователь. Стоимость доставки в другие "
+"районы, кроме Сергели, составляет 15000 сум, поэтому общая сумма к оплате"
+" составит: "
+
+#: handlers/users/order.py:99 handlers/users/order.py:158
+msgid ""
+"so'm bo'ladi‼️\n"
+"\n"
+"Ushbu miqdordagi summani to'lashga rozimisiz?"
+msgstr ""
+"сум‼️\n"
+"\n"
+"Вы согласны оплатить эту сумму?"
+
+#: handlers/users/order.py:103
 msgid "‼️Iltimos qayta manzil yuboring."
-msgstr ""
+msgstr "‼️Пожалуйста, отправьте адрес повторно."
 
-#: handlers/users/order.py:109
-msgid "🤗 Yetkazib berish joylashuvini tanlang"
-msgstr ""
-
-#: handlers/users/order.py:112
-msgid "😕 Kechirasiz bizning botimizda sizning manzilaringiz mavjud emas!"
-msgstr ""
+#: handlers/users/order.py:117
+msgid "✅ Buyurtmangiz bekor qilindi."
+msgstr "✅ Ваш заказ был отменен."
 
 #: handlers/users/order.py:132
+msgid "🤗 Yetkazib berish joylashuvini tanlang"
+msgstr "🤗 Выберите место доставки"
+
+#: handlers/users/order.py:135
+msgid "😕 Kechirasiz bizning botimizda sizning manzilaringiz mavjud emas!"
+msgstr "😕 Извините, в нашем боте ваши адреса отсутствуют!"
+
+#: handlers/users/order.py:162
 msgid "😕 Kechirasiz siz noto'g'ri manzil tanladingiz."
-msgstr ""
+msgstr "😕 Извините, вы выбрали неправильный адрес."
 
 #: handlers/users/register.py:16
 msgid "🇺🇿 Uzbek tili tanlandi. Iltimos toliq ismingizni yozing."
-msgstr ""
+msgstr "🇷🇺 Выбран русский язык. Пожалуйста, введите ваше полное имя."
 
 #: handlers/users/register.py:26
 msgid "📞 Iltimos telefon raqamingizni yuboring"
-msgstr ""
+msgstr "📞 Пожалуйста, отправьте ваш номер телефона"
 
 #: handlers/users/register.py:42
 msgid "🥳 Tabriklaymiz. Siz botimizdan muvaffaqqiyatli ro'yxatdan o'tdingiz."
-msgstr ""
+msgstr "🥳 Поздравляем! Вы успешно зарегистрировались в нашем боте."
 
 #: handlers/users/start.py:13 handlers/users/start.py:18
 msgid "Xush kelibsiz."
-msgstr ""
+msgstr "Добро пожаловать."
 
 #: handlers/users/start.py:37
 msgid ""
@@ -680,180 +781,208 @@ msgid ""
 "\n"
 "Til \t\t | Ism Familya   | Username |\n"
 msgstr ""
+"📰 Список пользователей: \n"
+"\n"
+"Язык \t\t | Имя Фамилия   | Имя пользователя |\n"
 
 #: keyboards/default/default_keyboards.py:9
 msgid "📞 Telefon raqam yuborish"
-msgstr ""
+msgstr "📞 Отправить номер телефона"
 
 #: keyboards/default/default_keyboards.py:19
 #: keyboards/default/default_keyboards.py:153
 msgid "📍 Filiallar"
-msgstr ""
+msgstr "📍 Филиалы"
 
 #: keyboards/default/default_keyboards.py:20
 #: keyboards/default/default_keyboards.py:158
 #: keyboards/default/default_keyboards.py:253
 msgid "🌐 Ijtimoiy tarmoqlar"
-msgstr ""
+msgstr "🌐 Социальные сети"
 
 #: keyboards/default/default_keyboards.py:33
 msgid "👤 Ism Familyani O'zgartirish"
-msgstr ""
+msgstr "👤 Изменить имя и фамилию"
 
 #: keyboards/default/default_keyboards.py:34
 msgid "📞 Telefon Raqamni O'zgartirish"
-msgstr ""
+msgstr "📞 Изменить номер телефона"
 
 #: keyboards/default/default_keyboards.py:37
 msgid "🇺🇿 🔁 🇷🇺 Tilni O'zgartirish"
-msgstr ""
+msgstr "🇺🇿 🔁 🇷🇺 Изменить язык"
 
 #: keyboards/default/default_keyboards.py:38
 msgid "🏘 Asosiy Menyu"
-msgstr ""
+msgstr "🏘 Главное меню"
 
 #: keyboards/default/default_keyboards.py:48
 msgid "🍴 Menyu"
-msgstr ""
+msgstr "🍴 Меню"
 
 #: keyboards/default/default_keyboards.py:51
 msgid "🛍 Mening buyurtmalarim"
-msgstr ""
+msgstr "🛍 Мои заказы"
 
 #: keyboards/default/default_keyboards.py:52
 msgid "✍️ Izoh qoldirish"
-msgstr ""
+msgstr "✍️ Оставить отзыв"
 
 #: keyboards/default/default_keyboards.py:55
 msgid "ℹ️ Biz haqimizda"
-msgstr ""
+msgstr "ℹ️ О нас"
 
 #: keyboards/default/default_keyboards.py:56
 msgid "📍🌐 Filiallar va Ijtimoiy tarmoqlar"
-msgstr ""
+msgstr "📍🌐 Филиалы и Социальные сети"
 
 #: keyboards/default/default_keyboards.py:59
 msgid "⚙️ Sozlamalar"
-msgstr ""
+msgstr "⚙️ Настройки"
 
 #: keyboards/default/default_keyboards.py:80
 msgid "✅ Xa"
-msgstr ""
+msgstr "✅ Да"
 
 #: keyboards/default/default_keyboards.py:81
 msgid "❌ Yo'q"
-msgstr ""
+msgstr "❌ Нет"
 
 #: keyboards/default/default_keyboards.py:104
 msgid "🗺 Mening manzillarim"
-msgstr ""
+msgstr "🗺 Мои адреса"
 
 #: keyboards/default/default_keyboards.py:107
 #: keyboards/default/default_keyboards.py:118
 msgid "📍 Joylashuv yuborish"
-msgstr ""
+msgstr "📍 Отправить местоположение"
 
 #: keyboards/default/default_keyboards.py:128
 msgid "🚶 Borib olish"
-msgstr ""
+msgstr "🚶 Самовывоз"
 
 #: keyboards/default/default_keyboards.py:129
 msgid "🚚 Dostavka"
-msgstr ""
+msgstr "🚚 Доставка"
 
 #: keyboards/default/default_keyboards.py:143
 msgid "🍴 Menyu sozlamalari"
-msgstr ""
+msgstr "🍴 Настройки меню"
 
 #: keyboards/default/default_keyboards.py:146
 msgid "🍽 Menyu"
-msgstr ""
+msgstr "🍽 Меню"
 
 #: keyboards/default/default_keyboards.py:149
 msgid "✍️ Xabar yuborish"
-msgstr ""
+msgstr "✍️ Отправить сообщение"
 
 #: keyboards/default/default_keyboards.py:150
 msgid "🏷 Aksiya"
-msgstr ""
+msgstr "🏷 Акция"
 
 #: keyboards/default/default_keyboards.py:154
 msgid "👥 Foydalanuvchilar"
-msgstr ""
+msgstr "👥 Пользователи"
 
 #: keyboards/default/default_keyboards.py:157
 #: keyboards/default/default_keyboards.py:238
 msgid "👤 Adminlar"
-msgstr ""
+msgstr "👤 Администраторы"
 
 #: keyboards/default/default_keyboards.py:161
 msgid "🔁 Logo o'zgartirish"
-msgstr ""
+msgstr "🔁 Изменить логотип"
 
 #: keyboards/default/default_keyboards.py:171
 msgid "➕🍴 Menyu qoshish"
-msgstr ""
+msgstr "➕🍴 Добавить меню"
 
 #: keyboards/default/default_keyboards.py:172
 msgid "🚫🍴 Menyu ochirish"
-msgstr ""
+msgstr "🚫🍴 Удалить меню"
 
 #: keyboards/default/default_keyboards.py:175
 msgid "➕🌯 Taom qoshish"
-msgstr ""
+msgstr "➕🌯 Добавить блюдо"
 
 #: keyboards/default/default_keyboards.py:176
 msgid "🚫🌯 Taom ochirsh"
-msgstr ""
+msgstr "🚫🌯 Удалить блюдо"
 
 #: keyboards/default/default_keyboards.py:179
 msgid "🔧💰 Taom narxini o'zgartirish"
-msgstr ""
+msgstr "🔧💰 Изменить цену блюда"
 
 #: keyboards/default/default_keyboards.py:180
 msgid "🔧🖼 Taom rasmini o'zgartirish"
-msgstr ""
+msgstr "🔧🖼 Изменить изображение блюда"
 
 #: keyboards/default/default_keyboards.py:193
 msgid "❌ Foydalanuvchi ochirish"
-msgstr ""
+msgstr "❌ Удалить пользователя"
 
 #: keyboards/default/default_keyboards.py:196
 msgid "🚫 Foydalanuvchi bloklash"
-msgstr ""
+msgstr "🚫 Заблокировать пользователя"
 
 #: keyboards/default/default_keyboards.py:206
 msgid "🏷 Aksiya yoqish ochirish"
-msgstr ""
+msgstr "🏷 Включить/Отключить акцию"
 
 #: keyboards/default/default_keyboards.py:207
 msgid "➕🏷 Aksiyaga taom qoshish"
-msgstr ""
+msgstr "➕🏷 Добавить блюдо в акцию"
 
 #: keyboards/default/default_keyboards.py:220
 msgid "➕📍 Filial qoshish"
-msgstr ""
+msgstr "➕📍 Добавить филиал"
 
 #: keyboards/default/default_keyboards.py:221
 msgid "🚫📍 Filial olib tashlash"
-msgstr ""
+msgstr "🚫📍 Удалить филиал"
 
 #: keyboards/default/default_keyboards.py:234
 msgid "➕👤 Admin qoshish"
-msgstr ""
+msgstr "➕👤 Добавить администратора"
 
 #: keyboards/default/default_keyboards.py:235
 msgid "🚫👤 Admin olib tashlash"
-msgstr ""
+msgstr "🚫👤 Удалить администратора"
 
 #: keyboards/default/default_keyboards.py:249
 msgid "➕🌐 Ijtimoiy tarmoq qoshish"
-msgstr ""
+msgstr "➕🌐 Добавить социальную сеть"
 
 #: keyboards/default/default_keyboards.py:250
 msgid "🚫🌐 Ijtimoiy tarmoq ochirish"
-msgstr ""
+msgstr "🚫🌐 Удалить социальную сеть"
 
-#: middlewares/language.py:31
-msgid "‼️ Kechirasiz bro. Siz ushbu botda admin tomonidan blok qilingansiz."
+#: middlewares/check_order_time.py:16
+msgid ""
+"😕 Kechirasiz bizning ish vaqtimiz 09:00 dan 03:00 gacha. Siz faqat ushbu "
+"vaqt oralig'gida bbizga buyurtma berishingiz mumkin."
+msgstr ""
+"😕 Извините, наше рабочее время с 09:00 до 03:00. Вы можете сделать заказ "
+"только в этот промежуток времени."
+
+#: middlewares/language.py:39
+msgid "‼️ Kechirasiz bro. Siz ushbu botda admin tomonidan "
 msgstr "‼️ Извините, вы были заблокированы администратором в этом боте."
+
+#: middlewares/language.py:41
+msgid "kunga blok bo'lgansiz."
+msgstr "дней."
+
+#: middlewares/language.py:48
+msgid "🥳 Tabriklaymiz hurmatli foydalanuvchi sizning "
+msgstr "🥳 Поздравляем, уважаемый пользователь, ваш "
+
+#: middlewares/language.py:50
+msgid ""
+"kunlik blok holatingiz o'z nihoyasiga yetdi. Botimizdan faol "
+"foydalanishingiz mumkin. Botimizdan foydalanish uchun avvalo /start "
+"buyrug'ini kiriting."
+msgstr ""
+"дневной блокировка подошла к концу. Вы можете снова активно пользоваться "
+"нашим ботом. Чтобы начать, введите команду /start."

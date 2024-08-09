@@ -23,7 +23,7 @@ async def write_full_name_handler(message: types.Message, state: FSMContext):
         'lang': data['lang'],
         "full_name": message.text
     })
-    await message.answer(text=_(f"📞 Iltimos telefon raqamingizni yuboring"), reply_markup=await user_keyboards.phone_number(lang=data['lang']))
+    await message.answer(text=_(f"📞 Iltimos telefon raqamingizni yuboring", locale=data['lang']), reply_markup=await user_keyboards.phone_number(lang=data['lang']))
     await state.set_state('send_phone_number')
 
 @dp.message_handler(state='send_phone_number', content_types=[types.ContentType.CONTACT, types.ContentType.TEXT])

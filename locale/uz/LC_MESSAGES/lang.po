@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-02 17:26+0500\n"
+"POT-Creation-Date: 2024-08-09 18:08+0500\n"
 "PO-Revision-Date: 2024-08-02 17:26+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uz\n"
@@ -52,8 +52,8 @@ msgstr ""
 #: handlers/users/admin_functions.py:69
 #: handlers/users/main_inline_keyboards.py:33 handlers/users/main_menu.py:18
 #: handlers/users/main_menu.py:75 handlers/users/menu.py:17
-#: handlers/users/menu.py:37 handlers/users/order.py:26
-#: handlers/users/order.py:47 handlers/users/order.py:104
+#: handlers/users/menu.py:37 handlers/users/order.py:22
+#: handlers/users/order.py:43 handlers/users/order.py:127
 #: keyboards/inline/inline_keyboards.py:24
 msgid "⬅️ Ortga"
 msgstr ""
@@ -67,11 +67,12 @@ msgid "🛍 Savat"
 msgstr ""
 
 #: handlers/users/admin_functions.py:73 handlers/users/main_menu.py:21
+#: handlers/users/menu.py:41
 msgid "🎉 Aksiya"
 msgstr ""
 
 #: handlers/users/admin_functions.py:77 handlers/users/main_menu.py:27
-#: handlers/users/menu.py:44
+#: handlers/users/menu.py:45
 msgid "😋 Bizning menyu"
 msgstr ""
 
@@ -119,174 +120,188 @@ msgid ""
 "Masalan: YouTube"
 msgstr ""
 
-#: handlers/users/admin_functions.py:152
+#: handlers/users/admin_functions.py:151
 msgid "🌐 Qaysi ijtimoiy tarmoqni olib tashlamoqchisiz? ID Raqamini kiriting"
 msgstr ""
 
-#: handlers/users/admin_functions.py:163
+#: handlers/users/admin_functions.py:162
 msgid "🔗 Yangi ijtimoiy tarmoq linkini yuboring."
 msgstr ""
 
-#: handlers/users/admin_functions.py:174
+#: handlers/users/admin_functions.py:173
 msgid "✅ Yangi ijtimoiy tarmoq qoshildi."
 msgstr ""
 
-#: handlers/users/admin_functions.py:182
+#: handlers/users/admin_functions.py:181
 msgid "✅ Ijtimoiy tarmoq ochirib yuborildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:185
+#: handlers/users/admin_functions.py:184
 msgid ""
 "😕 Kechrasiz bro. Bunday id raqamli IJtimoiy tarmoq mavjud emas, yoki siz "
 "id raqamni no'tog'ri kiritdigiz."
 msgstr ""
 
-#: handlers/users/admin_functions.py:191
+#: handlers/users/admin_functions.py:190
 msgid ""
 "📰 Adminlar ro'yxati:\n"
 "\n"
 msgstr ""
 
-#: handlers/users/admin_functions.py:199
+#: handlers/users/admin_functions.py:198
 msgid "✍️ Yangi admin chat id raqamini yozing"
 msgstr ""
 
-#: handlers/users/admin_functions.py:203
+#: handlers/users/admin_functions.py:202
 msgid "✍️ Olib tashlamoqchi bo'lgan adminingiz id raqamini kiriting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:218
+#: handlers/users/admin_functions.py:217
 msgid "✅ Adminlar qatoridan ochirib yuborildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:220
+#: handlers/users/admin_functions.py:219
 msgid ""
 "😕 Kechirasiz bro. Siz id raqamni noto'gri kiritdingiz. Yoki agar to'gri "
 "kiritgan bo'lsangiz admin ochirib yuborilganini '👤 Adminlar' bo'limidagi "
 "'👤 Adminlar' funksiyasi orqali yana 1 tekshirib ko'ring!:)"
 msgstr ""
 
-#: handlers/users/admin_functions.py:228
+#: handlers/users/admin_functions.py:227
 msgid "😉 Tabriklaymiz "
 msgstr ""
 
-#: handlers/users/admin_functions.py:230
+#: handlers/users/admin_functions.py:229
 msgid ""
 "siz bizning Barracha Food botimizda adminlik huquqiga ega bo'ldingiz. "
 "Adminlik huquqidan foydalanishingiz mumkin!"
 msgstr ""
 
-#: handlers/users/admin_functions.py:233
+#: handlers/users/admin_functions.py:232
 msgid "✅ Yangi admin qoshildi."
 msgstr ""
 
-#: handlers/users/admin_functions.py:236
+#: handlers/users/admin_functions.py:235
 msgid ""
 "❌ Kechirasiz bro. Siz chat id raqamni noto'g'ri kiritdingiz, yoki bunday "
 "chat id raqamli foydalanuvchi mavjud emas! Tekshirib qayta kiritishingiz "
 "mumkin! 😉"
 msgstr ""
 
-#: handlers/users/admin_functions.py:243
+#: handlers/users/admin_functions.py:242
 msgid "‼️ Aksiya hozirda aktiv holatda. Aksiyani ochirasizmi?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:246
+#: handlers/users/admin_functions.py:245
 msgid "‼️ Aksiya hozirda aktiv bolmagan holatda. Aksiyani aktivlashtirasizmi?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:249
+#: handlers/users/admin_functions.py:248
 msgid "✍️ Aksiya uchun yangi taom nomini uzbek tilida kiriting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:258
+#: handlers/users/admin_functions.py:257
 msgid "✍️ Aksiya uchun taom nomini endi rus tilida kiritng"
 msgstr ""
 
-#: handlers/users/admin_functions.py:267
+#: handlers/users/admin_functions.py:266
 msgid "🖼 Aksiyadagi taom uchun rasm kiriting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:276
+#: handlers/users/admin_functions.py:275
 msgid "✍️ Aksiyadagi taom uchun ma'lumot qo'shing, Uzbek tilida"
 msgstr ""
 
-#: handlers/users/admin_functions.py:285
+#: handlers/users/admin_functions.py:284
 msgid "✍️ Aksiyadagi taom ma'lumotini endi rus tilida kiriting"
 msgstr ""
 
-#: handlers/users/admin_functions.py:294
+#: handlers/users/admin_functions.py:293
 msgid ""
 "✍️ Aksiyadagi taom narxini kiriting.\n"
 "Butun sonlarda"
 msgstr ""
 
-#: handlers/users/admin_functions.py:306
+#: handlers/users/admin_functions.py:305
 msgid "✅ Aksiya uchun yangi taom qoshildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:315
+#: handlers/users/admin_functions.py:314
 msgid "✅ Aksiya holati ochirildi."
 msgstr ""
 
-#: handlers/users/admin_functions.py:317
+#: handlers/users/admin_functions.py:316
 msgid "✅ Aksiya holati aktiv holatda turibdi!"
 msgstr ""
 
-#: handlers/users/admin_functions.py:324
+#: handlers/users/admin_functions.py:323
 msgid "🖼 Aksiya holatini aktivlashtirish uchun aksiya rasmini yuboring."
 msgstr ""
 
-#: handlers/users/admin_functions.py:327
+#: handlers/users/admin_functions.py:326
 msgid "✅ Aksiya holati aktiv bo'lmagan holatda turibdi!"
 msgstr ""
 
-#: handlers/users/admin_functions.py:334
+#: handlers/users/admin_functions.py:333
 msgid "🥳 Yangi aksiya qoshildi. Aksiyaga taomlar qoshishingiz mumkin."
 msgstr ""
 
-#: handlers/users/admin_functions.py:341
+#: handlers/users/admin_functions.py:340
 msgid "Foydalanuvchilarga yubormoqchi bo'lgan xabaringizni kirtiting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:355
+#: handlers/users/admin_functions.py:354
 msgid "Kechirasiz bro. Rasm yoki videoni 1 dona yuboring"
 msgstr ""
 
-#: handlers/users/admin_functions.py:366
+#: handlers/users/admin_functions.py:365
 msgid "✉️ Foydalanuvchilarga xabar yuborilmoqda ⏳"
 msgstr ""
 
-#: handlers/users/admin_functions.py:378
+#: handlers/users/admin_functions.py:377
 msgid "✅ Foydalanuvchilarga xabar yuborildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:385
+#: handlers/users/admin_functions.py:384
 msgid "✍️ Ochirmoqchi bo'lgan foydalanuvchi id raqamini kiriting"
 msgstr ""
 
-#: handlers/users/admin_functions.py:391
+#: handlers/users/admin_functions.py:390
 msgid "✍️ Bloklamoqchi bo'lgan foydalanuvchi id raqamini kiriting"
 msgstr ""
 
-#: handlers/users/admin_functions.py:399
-msgid "✅ Foydalanuvchi bloklandi"
+#: handlers/users/admin_functions.py:400
+msgid "🕔 Ushbu foydalanuvchini necha kunga blok qilmoqchisiz?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:403 handlers/users/admin_functions.py:414
+#: handlers/users/admin_functions.py:404 handlers/users/admin_functions.py:433
 msgid ""
 "😕 Kechirasiz bro siz id raqam no'tog'ri kiritdingiz yoki bunday id "
 "raqamli foydalanuvchi mavjud emas!‼️"
 msgstr ""
 
-#: handlers/users/admin_functions.py:411
+#: handlers/users/admin_functions.py:416
+msgid "✅ Foydalanuvchi "
+msgstr ""
+
+#: handlers/users/admin_functions.py:418
+msgid " kunga bloklandi."
+msgstr ""
+
+#: handlers/users/admin_functions.py:422
+msgid ""
+"😕 Kechirasiz bro. Siz bloklamoqchi bo'lgan foydalanuvchi id raqamini yoki"
+" vaqtni to'gri kiritmadingiz. Qayta urinib korishingiz mumkin."
+msgstr ""
+
+#: handlers/users/admin_functions.py:430
 msgid "✅ Foydalanuvchi muvaffaqqiyatli ochirib yuborildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:421 handlers/users/admin_functions.py:480
-#: handlers/users/admin_functions.py:522 handlers/users/admin_functions.py:570
-#: handlers/users/order.py:27 handlers/users/order.py:48
-#: handlers/users/order.py:105 keyboards/default/default_keyboards.py:23
+#: handlers/users/admin_functions.py:440 handlers/users/admin_functions.py:499
+#: handlers/users/admin_functions.py:541 handlers/users/admin_functions.py:589
+#: handlers/users/order.py:23 handlers/users/order.py:44
+#: handlers/users/order.py:128 keyboards/default/default_keyboards.py:23
 #: keyboards/default/default_keyboards.py:84
 #: keyboards/default/default_keyboards.py:94
 #: keyboards/default/default_keyboards.py:108
@@ -299,165 +314,165 @@ msgstr ""
 msgid "❌ Bekor qilish"
 msgstr ""
 
-#: handlers/users/admin_functions.py:426
+#: handlers/users/admin_functions.py:445
 msgid "😊 Yangi menyu nomini uzbek tilida kiriting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:430
+#: handlers/users/admin_functions.py:449
 msgid "😊 Ochirmoqchi bo'lgan menyuingizni tanlang."
 msgstr ""
 
-#: handlers/users/admin_functions.py:434
+#: handlers/users/admin_functions.py:453
 msgid "😊 Yangi taomni qaysi menyuga qoshmoqchisiz?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:439
+#: handlers/users/admin_functions.py:458
 msgid "😊 Olib tashlamoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:444
+#: handlers/users/admin_functions.py:463
 msgid "😊 Narxini ozgartirmoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:449
+#: handlers/users/admin_functions.py:468
 msgid "😊 Rasmini ozgartirmoqchi bo'lgan taomingiz qaysi menyuda joylashgan?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:453
+#: handlers/users/admin_functions.py:472
 msgid "😕 Funksiya topilmadi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:463
+#: handlers/users/admin_functions.py:482
 msgid "✅ Logo muvaffaqqiyatli o'zgartirildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:484
+#: handlers/users/admin_functions.py:503
 msgid "😊 Qaysi taomning rasmini o'zgartirmoqchisiz?"
 msgstr ""
 
-#: handlers/users/admin_functions.py:495
+#: handlers/users/admin_functions.py:514
 msgid "😊 Ushbu taom uchun yangi surat yuboring."
 msgstr ""
 
-#: handlers/users/admin_functions.py:507
+#: handlers/users/admin_functions.py:526
 msgid "🥳 Taom rasmi muvaffaqqiyatli o'zgartirildi."
 msgstr ""
 
-#: handlers/users/admin_functions.py:526
+#: handlers/users/admin_functions.py:545
 msgid "😊 Narxini o'zgartirmoqchi bo'lgan taomingizni tanlang."
 msgstr ""
 
-#: handlers/users/admin_functions.py:539
+#: handlers/users/admin_functions.py:558
 msgid ""
 "✍️ Ushbu taom uchun yangi narx kiriting.\n"
 "‼️ Butun sonlarda ‼️"
 msgstr ""
 
-#: handlers/users/admin_functions.py:553
+#: handlers/users/admin_functions.py:572
 msgid "✅ Taom narxi muvaffaqqiyatli o'zgartirildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:557
+#: handlers/users/admin_functions.py:576
 msgid "‼️ Taom narxini faqat butun sonlarda kiritish mumkin ‼️"
 msgstr ""
 
-#: handlers/users/admin_functions.py:578
+#: handlers/users/admin_functions.py:597
 msgid "😊 Olib tashlamoqchi bo'lgan taomingizni tanlang."
 msgstr ""
 
-#: handlers/users/admin_functions.py:594
+#: handlers/users/admin_functions.py:613
 msgid "✅ Taom muvaffaqqiyatli olib tashlandi."
 msgstr ""
 
-#: handlers/users/admin_functions.py:609
+#: handlers/users/admin_functions.py:628
 msgid "😊 Yangi taomni nomini kiriting. Uzbek tilida"
 msgstr ""
 
-#: handlers/users/admin_functions.py:620
+#: handlers/users/admin_functions.py:639
 msgid "😊 Yangi taom nomini endi rus tilida kiriting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:630
+#: handlers/users/admin_functions.py:649
 msgid "😊 Yangi taom haqida ma'lumot kiriting. Uzbek tilida"
 msgstr ""
 
-#: handlers/users/admin_functions.py:640
+#: handlers/users/admin_functions.py:659
 msgid "😊 Yangi taom nomini endi res tilida kiriting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:650
+#: handlers/users/admin_functions.py:669
 msgid ""
 "😊 Yangi taom narxini kiriting.\n"
 "‼️ Butun sonlarda ‼️"
 msgstr ""
 
-#: handlers/users/admin_functions.py:661
+#: handlers/users/admin_functions.py:680
 msgid "😊 Yangi taom rasmini yuboring."
 msgstr ""
 
-#: handlers/users/admin_functions.py:664
+#: handlers/users/admin_functions.py:683
 msgid "‼️Yangi taom narxini butun sonlarda kiriting.‼️"
 msgstr ""
 
-#: handlers/users/admin_functions.py:677
+#: handlers/users/admin_functions.py:696
 msgid "🥳 Yangi taom muvaffaqqiyatli qoshildi"
 msgstr ""
 
-#: handlers/users/admin_functions.py:689
+#: handlers/users/admin_functions.py:708
 msgid "✅ Menyu muvaffaqqiyatli ochirib yuborildi."
 msgstr ""
 
-#: handlers/users/admin_functions.py:702
+#: handlers/users/admin_functions.py:721
 msgid "😊 Endi yangi menyu nomini ruschada kiriting."
 msgstr ""
 
-#: handlers/users/admin_functions.py:712
+#: handlers/users/admin_functions.py:731
 msgid "Yangi menyuni rasmini yuboring"
 msgstr ""
 
-#: handlers/users/admin_functions.py:725
+#: handlers/users/admin_functions.py:744
 msgid "🥳 Yangi menyu muvaffaqqiyatli qoshildi."
 msgstr ""
 
-#: handlers/users/echo.py:14 handlers/users/main_buttons.py:10
-#: handlers/users/main_buttons.py:26 handlers/users/main_buttons.py:51
-#: handlers/users/main_buttons.py:83 handlers/users/main_menu.py:76
+#: handlers/users/echo.py:14 handlers/users/main_buttons.py:12
+#: handlers/users/main_buttons.py:28 handlers/users/main_buttons.py:56
+#: handlers/users/main_buttons.py:91 handlers/users/main_menu.py:76
 #: handlers/users/menu.py:27 keyboards/default/default_keyboards.py:69
 msgid "🏘 Asosiy menyu"
 msgstr ""
 
-#: handlers/users/main_buttons.py:10
+#: handlers/users/main_buttons.py:12
 msgid "✅ Bekor qilindi"
 msgstr ""
 
-#: handlers/users/main_buttons.py:23 handlers/users/main_buttons.py:48
-#: handlers/users/main_buttons.py:79
+#: handlers/users/main_buttons.py:25 handlers/users/main_buttons.py:53
+#: handlers/users/main_buttons.py:87
 msgid ""
 "🛍 Sizning savatingiz\n"
 "\n"
 msgstr ""
 
-#: handlers/users/main_buttons.py:27 handlers/users/main_buttons.py:52
-#: handlers/users/main_buttons.py:84
+#: handlers/users/main_buttons.py:29 handlers/users/main_buttons.py:57
+#: handlers/users/main_buttons.py:92
 msgid "🛒 Buyurtma berish"
 msgstr ""
 
-#: handlers/users/main_buttons.py:36 handlers/users/main_buttons.py:61
-#: handlers/users/main_buttons.py:91
+#: handlers/users/main_buttons.py:38 handlers/users/main_buttons.py:66
+#: handlers/users/main_buttons.py:99
 msgid ""
 "\n"
 "💰 Ja'mi: "
 msgstr ""
 
-#: handlers/users/main_buttons.py:41 handlers/users/main_buttons.py:66
+#: handlers/users/main_buttons.py:46 handlers/users/main_buttons.py:74
 msgid "😕 Kechirasiz sizning savatingiz bo'sh"
 msgstr ""
 
-#: handlers/users/main_buttons.py:76 handlers/users/main_inline_keyboards.py:28
+#: handlers/users/main_buttons.py:84 handlers/users/main_inline_keyboards.py:28
 msgid "✅ Mahsulot savatingizdan olib tashlandi."
 msgstr ""
 
-#: handlers/users/main_buttons.py:96
+#: handlers/users/main_buttons.py:107
 msgid "🤗 Buyurtma turini tanlang."
 msgstr ""
 
@@ -584,76 +599,91 @@ msgstr ""
 msgid "😊 Xabaringiz adminlarga yuborildi!"
 msgstr ""
 
-#: handlers/users/menu.py:41
-msgid "Aksiya"
-msgstr ""
-
-#: handlers/users/menu.py:50
+#: handlers/users/menu.py:51
 msgid "Taom"
 msgstr ""
 
-#: handlers/users/menu.py:50
+#: handlers/users/menu.py:51
 msgid "Taom haqida"
 msgstr ""
 
-#: handlers/users/menu.py:50
+#: handlers/users/menu.py:51
 msgid "Narxi"
 msgstr ""
 
-#: handlers/users/order.py:21
+#: handlers/users/order.py:16
 msgid ""
-"🤗 Yetkazib berish joylashuvini yuboring yoki '🗺 Mening manzillarim' "
-"tugmasi orqali manzil tanlang."
+"\n"
+"🤗 Davom etish uchun yetkazib berish joylashuvini yuboring yoki '🗺 Mening "
+"manzillarim' tugmasi orqali manzil tanlang."
 msgstr ""
 
-#: handlers/users/order.py:30
+#: handlers/users/order.py:26
 msgid "🤗 Buyurtmangizni qaysi filialimizdan olib ketmoqchisiz?"
 msgstr ""
 
-#: handlers/users/order.py:43
+#: handlers/users/order.py:39
 msgid "❓ Haqiqatdan ham ushbu filialimizga buyurtma bermoqchimisiz?"
 msgstr ""
 
-#: handlers/users/order.py:51
+#: handlers/users/order.py:47
 msgid ""
 "😕 Kechirasiz bro siz noto'g'ri filial kiritdingiz iltimos qayta tekshirib"
 " kiriting."
 msgstr ""
 
-#: handlers/users/order.py:59 handlers/users/order.py:89
-#: handlers/users/order.py:127
+#: handlers/users/order.py:55 handlers/users/order.py:91
+#: handlers/users/order.py:112 handlers/users/order.py:151
 msgid ""
 "✅ Buyurtmangiz qabul qilindi\n"
 "🆔 Buyurtma raqamingiz: "
 msgstr ""
 
-#: handlers/users/order.py:65
+#: handlers/users/order.py:61
 msgid ""
 "😊 Buyurtmangiz bekor qilindi. Agar qayta buyurtma bermoqchi bo'lsangiz '🛍"
 " Savat' tugmasini bosing"
 msgstr ""
 
-#: handlers/users/order.py:77
+#: handlers/users/order.py:73
 msgid "Siz yuborgan manzil:\n"
 msgstr ""
 
-#: handlers/users/order.py:79
+#: handlers/users/order.py:75
 msgid "Ushbu manzilni tasdiqlaysizmi?"
 msgstr ""
 
-#: handlers/users/order.py:95
+#: handlers/users/order.py:97 handlers/users/order.py:156
+msgid ""
+"‼️ Eslatib o'tamiz hurmatli foydalanuvchi. Bizda dostavka xizmatimiz "
+"sergelidan boshqa hududlarga 15000 so'm bo'lganligi sabab sizning ja'mi "
+"to'laydigan summangiz: "
+msgstr ""
+
+#: handlers/users/order.py:99 handlers/users/order.py:158
+msgid ""
+"so'm bo'ladi‼️\n"
+"\n"
+"Ushbu miqdordagi summani to'lashga rozimisiz?"
+msgstr ""
+
+#: handlers/users/order.py:103
 msgid "‼️Iltimos qayta manzil yuboring."
 msgstr ""
 
-#: handlers/users/order.py:109
-msgid "🤗 Yetkazib berish joylashuvini tanlang"
-msgstr ""
-
-#: handlers/users/order.py:112
-msgid "😕 Kechirasiz bizning botimizda sizning manzilaringiz mavjud emas!"
+#: handlers/users/order.py:117
+msgid "✅ Buyurtmangiz bekor qilindi."
 msgstr ""
 
 #: handlers/users/order.py:132
+msgid "🤗 Yetkazib berish joylashuvini tanlang"
+msgstr ""
+
+#: handlers/users/order.py:135
+msgid "😕 Kechirasiz bizning botimizda sizning manzilaringiz mavjud emas!"
+msgstr ""
+
+#: handlers/users/order.py:162
 msgid "😕 Kechirasiz siz noto'g'ri manzil tanladingiz."
 msgstr ""
 
@@ -853,6 +883,288 @@ msgstr ""
 msgid "🚫🌐 Ijtimoiy tarmoq ochirish"
 msgstr ""
 
-#: middlewares/language.py:31
-msgid "‼️ Kechirasiz bro. Siz ushbu botda admin tomonidan blok qilingansiz."
+#: middlewares/check_order_time.py:16
+msgid ""
+"😕 Kechirasiz bizning ish vaqtimiz 09:00 dan 03:00 gacha. Siz faqat ushbu "
+"vaqt oralig'gida bbizga buyurtma berishingiz mumkin."
 msgstr ""
+
+#: middlewares/language.py:39
+msgid "‼️ Kechirasiz bro. Siz ushbu botda admin tomonidan "
+msgstr ""
+
+#: middlewares/language.py:41
+msgid "kunga blok bo'lgansiz."
+msgstr ""
+
+#: middlewares/language.py:48
+msgid "🥳 Tabriklaymiz hurmatli foydalanuvchi sizning "
+msgstr ""
+
+#: middlewares/language.py:50
+msgid ""
+"kunlik blok holatingiz o'z nihoyasiga yetdi. Botimizdan faol "
+"foydalanishingiz mumkin. Botimizdan foydalanish uchun avvalo /start "
+"buyrug'ini kiriting."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/_termui_impl.py:518
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/_termui_impl.py:522
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1120
+msgid "Aborted!"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1309
+#: venv/lib/python3.10/site-packages/click/decorators.py:559
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1340
+#: venv/lib/python3.10/site-packages/click/core.py:1370
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1387
+msgid "Options"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1415
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1428
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1636
+msgid "Commands"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1668
+msgid "Missing command."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1746
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:2310
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:2333
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:2778
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:2808
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:2821
+msgid "default: {default}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:2834
+msgid "required"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/decorators.py:528
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:44
+#: venv/lib/python3.10/site-packages/click/exceptions.py:80
+msgid "Error: {message}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:72
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:121
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:123
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:179
+msgid "Missing argument"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:181
+msgid "Missing option"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:183
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:185
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:192
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:212
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:226
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:262
+msgid "unknown error"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/parser.py:473
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/shell_completion.py:318
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/termui.py:176
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:266
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:300
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:394
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:470
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:822
+msgid "file"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:824
+msgid "directory"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:826
+msgid "path"
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:894
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:903
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:987
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+

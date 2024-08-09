@@ -146,7 +146,7 @@ class AdminKeyboards:
                     KeyboardButton(text=loader._(f"🍽 Menyu", locale=lang))
                 ],
                 [
-                    KeyboardButton(text=loader._(f"✍️ Xabar yuborish")),
+                    KeyboardButton(text=loader._(f"✍️ Xabar yuborish", locale=lang)),
                     KeyboardButton(text=loader._(f"🏷 Aksiya", locale=lang)),
                 ],
                 [

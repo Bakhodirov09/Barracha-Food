@@ -64,7 +64,7 @@ async def in_start_handler(message: types.Message, state: FSMContext):
         await message.answer(text=_(f"😊 Ozingizga kerakli bo'limni tanlang.", locale=user['lang']), reply_markup=await user_keyboards.filials_and_socials(lang=user['lang']))
         await state.set_state('select_option')
     elif message.text.split(' ')[0] == "⚙️":
-        await message.answer(text=_(f"⚙️ Sizning sozlamalaringiz."), reply_markup=await user_keyboards.user_settings_menu(lang=user[4]))
+        await message.answer(text=_(f"⚙️ Sizning sozlamalaringiz."), reply_markup=await user_keyboards.user_settings_menu(lang=user['lang']))
         await state.set_state('in_settings')
 
 @dp.message_handler(state='select_option')
@@ -76,10 +76,11 @@ async def select_option_handler(message: types.Message, state: FSMContext):
         filials_btn.insert(KeyboardButton(text=_(f"🏘 Asosiy menyu", locale=user['lang'])))
         for filial in await other.get_all_filials(lang=user['lang']):
             filials_btn.insert(KeyboardButton(text=f"📍 {filial['name']}"))
+        await message.answer(text=message.text, reply_markup=filials_btn)
         await state.set_state('in_filials')
     elif message.text[0] == "🌐":
         socials = await other.get_all_socials()
-        userga = _(f"🌐 Bizning ijtimoiy tarmoqdagi sahifalarimiz. \n\n")
+        userga = _(f"🌐 Bizning ijtimoiy tarmoqdagi sahifalarimiz. \n\n", locale=user['lang'])
         for social in socials:
             userga += f"<a href='{social['link']}'>{social['name']}</a>"
         await message.answer(text=userga, reply_markup=await user_keyboards.users_panel(lang=user['lang']))
@@ -87,13 +88,13 @@ async def select_option_handler(message: types.Message, state: FSMContext):
 
 @dp.message_handler(state='in_filials')
 async def in_filials_handler(message: types.Message, state: FSMContext):
-    filial = await other.get_filial(name=message.text[1:])
+    filial = await other.get_filial(name=message.text[2:])
     user = await user_settings.get_user(chat_id=message.chat.id)
     if filial:
-        userga = _(f"📍 Filial: ")
-        userga += filial['name']
-        userga += _(f"🕔 Ish vaqti: 09:00 dan 03:00 gacha")
-        await message.answer_location(latitude=filial['latitude'], longitude=filial['longitude'])
+        userga = _(f"📍 Filial: ", locale=user['lang'])
+        userga += f"{filial['name']}\n"
+        userga += _(f"🕔 Ish vaqti: 09:00 dan 03:00 gacha", locale=user['lang'])
+        await message.reply_location(latitude=filial['latitude'], longitude=filial['longitude'])
         await message.reply_photo(caption=userga, photo=filial['photo'], reply_markup=await user_keyboards.users_panel(lang=user['lang']))
         await state.set_state('in_start')
 
@@ -107,8 +108,8 @@ async def in_settings_handler(message: types.Message, state: FSMContext):
         await message.answer(text=_(f"😊 Telefon raqamingizni tugma orqali yuboring, yoki yozib yuboring."), reply_markup=await user_keyboards.phone_number(lang=user[4]))
         await state.set_state('change_phone_number')
     else:
-        await message.answer(text=_(f"😊 O'zingizga qulay tilni tanlang."), reply_markup=await user_keyboards.cancel_btn(lang=user[4]))
-        await message.answer(text=_(f"Mavjud tillar"), reply_markup=languages)
+        await message.answer(text=_(f"😊 O'zingizga qulay tilni tanlang.", locale=user['lang']), reply_markup=await user_keyboards.cancel_btn(lang=user[4]))
+        await message.answer(text=_(f"Mavjud tillar", locale=user['lang']), reply_markup=languages)
         await state.set_state('change_lang')
 
 @dp.callback_query_handler(state='change_lang')
